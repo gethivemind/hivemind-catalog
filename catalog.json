@@ -1,0 +1,2882 @@
+{
+  "version": 1,
+  "generated_at": "2026-10-10T09:42:48.510Z",
+  "applications": [
+    {
+      "id": "atlassian",
+      "name": "Atlassian (Jira, Confluence)",
+      "description": "Jira issues and Confluence pages (hosted server, signs in through the browser).",
+      "category": "work",
+      "docs": "https://support.atlassian.com/atlassian-rovo-mcp-server/",
+      "uses": [
+        "tools"
+      ],
+      "mechanisms": [
+        {
+          "id": "mcp",
+          "kind": "mcp",
+          "label": "Hosted MCP server",
+          "runs": "hosted",
+          "auth": "oauth",
+          "trust": "official",
+          "comingSoon": true,
+          "catalogId": "atlassian",
+          "docs": "https://support.atlassian.com/atlassian-rovo-mcp-server/"
+        }
+      ]
+    },
+    {
+      "id": "brave-search",
+      "name": "Brave Search",
+      "description": "Web and local search through the Brave Search API.",
+      "category": "web",
+      "docs": "https://github.com/brave/brave-search-mcp-server",
+      "uses": [
+        "tools"
+      ],
+      "mechanisms": [
+        {
+          "id": "mcp",
+          "kind": "mcp",
+          "label": "MCP server on this machine",
+          "runs": "here",
+          "auth": "token",
+          "trust": "community",
+          "comingSoon": false,
+          "catalogId": "brave-search",
+          "docs": "https://github.com/brave/brave-search-mcp-server"
+        }
+      ]
+    },
+    {
+      "id": "context7",
+      "name": "Context7 (library docs)",
+      "description": "Up-to-date documentation for libraries and frameworks, so agents stop guessing APIs.",
+      "category": "code",
+      "docs": "https://github.com/upstash/context7",
+      "uses": [
+        "tools"
+      ],
+      "mechanisms": [
+        {
+          "id": "mcp",
+          "kind": "mcp",
+          "label": "MCP server on this machine",
+          "runs": "here",
+          "auth": "none",
+          "trust": "official",
+          "comingSoon": false,
+          "catalogId": "context7",
+          "docs": "https://github.com/upstash/context7"
+        }
+      ]
+    },
+    {
+      "id": "figma",
+      "name": "Figma",
+      "description": "Read design files and components (hosted server, signs in through the browser).",
+      "category": "design",
+      "docs": "https://help.figma.com/hc/en-us/articles/32132100833559",
+      "uses": [
+        "tools"
+      ],
+      "mechanisms": [
+        {
+          "id": "mcp",
+          "kind": "mcp",
+          "label": "Hosted MCP server",
+          "runs": "hosted",
+          "auth": "oauth",
+          "trust": "official",
+          "comingSoon": true,
+          "catalogId": "figma",
+          "docs": "https://help.figma.com/hc/en-us/articles/32132100833559"
+        }
+      ]
+    },
+    {
+      "id": "filesystem",
+      "name": "Filesystem",
+      "description": "Read, search and edit files under folders you choose. Good first connector; pick a folder you don't mind agents touching.",
+      "category": "files",
+      "docs": "https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem",
+      "uses": [
+        "tools"
+      ],
+      "mechanisms": [
+        {
+          "id": "mcp",
+          "kind": "mcp",
+          "label": "MCP server on this machine",
+          "runs": "here",
+          "auth": "none",
+          "trust": "official",
+          "comingSoon": false,
+          "catalogId": "filesystem",
+          "docs": "https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem"
+        }
+      ]
+    },
+    {
+      "id": "github",
+      "name": "GitHub",
+      "description": "Issues, pull requests, code search, repository contents through GitHub's hosted MCP server.",
+      "category": "code",
+      "docs": "https://github.com/github/github-mcp-server",
+      "uses": [
+        "tools"
+      ],
+      "mechanisms": [
+        {
+          "id": "cli:gh",
+          "kind": "cli",
+          "label": "Use GitHub CLI login",
+          "runs": "hosted",
+          "auth": "cli",
+          "trust": "official",
+          "recommended": true,
+          "toolId": "gh",
+          "catalogId": "github",
+          "docs": "https://cli.github.com/"
+        },
+        {
+          "id": "mcp",
+          "kind": "mcp",
+          "label": "Hosted MCP server",
+          "runs": "hosted",
+          "auth": "token",
+          "trust": "official",
+          "comingSoon": false,
+          "catalogId": "github",
+          "docs": "https://github.com/github/github-mcp-server"
+        }
+      ]
+    },
+    {
+      "id": "gmail",
+      "name": "Gmail",
+      "description": "Search, read and send mail from one or more Google accounts; an assistant line by mail later.",
+      "category": "mail",
+      "docs": "https://developers.google.com/gmail/api",
+      "uses": [
+        "tools",
+        "assistant"
+      ],
+      "mechanisms": [
+        {
+          "id": "native",
+          "kind": "native",
+          "label": "Google sign-in (your OAuth client)",
+          "runs": "here",
+          "auth": "oauth",
+          "trust": "official",
+          "recommended": true,
+          "comingSoon": true,
+          "provider": "gmail",
+          "warning": "Needs an OAuth client from your own Google Cloud project; Hivemind cannot ship one."
+        }
+      ]
+    },
+    {
+      "id": "linear",
+      "name": "Linear",
+      "description": "Issues, projects and cycles in Linear (hosted server, signs in through the browser).",
+      "category": "work",
+      "docs": "https://linear.app/docs/mcp",
+      "uses": [
+        "tools"
+      ],
+      "mechanisms": [
+        {
+          "id": "mcp",
+          "kind": "mcp",
+          "label": "Hosted MCP server",
+          "runs": "hosted",
+          "auth": "oauth",
+          "trust": "official",
+          "comingSoon": true,
+          "catalogId": "linear",
+          "docs": "https://linear.app/docs/mcp"
+        }
+      ]
+    },
+    {
+      "id": "memory",
+      "name": "Memory (knowledge graph)",
+      "description": "A small local knowledge graph agents can add facts to. Separate from Hivemind's vault; useful for scratch facts.",
+      "category": "memory",
+      "docs": "https://github.com/modelcontextprotocol/servers/tree/main/src/memory",
+      "uses": [
+        "tools"
+      ],
+      "mechanisms": [
+        {
+          "id": "mcp",
+          "kind": "mcp",
+          "label": "MCP server on this machine",
+          "runs": "here",
+          "auth": "none",
+          "trust": "official",
+          "comingSoon": false,
+          "catalogId": "memory",
+          "docs": "https://github.com/modelcontextprotocol/servers/tree/main/src/memory"
+        }
+      ]
+    },
+    {
+      "id": "notion",
+      "name": "Notion",
+      "description": "Pages and databases in your Notion workspace (hosted server, signs in through the browser).",
+      "category": "work",
+      "docs": "https://developers.notion.com/docs/mcp",
+      "uses": [
+        "tools"
+      ],
+      "mechanisms": [
+        {
+          "id": "mcp",
+          "kind": "mcp",
+          "label": "Hosted MCP server",
+          "runs": "hosted",
+          "auth": "oauth",
+          "trust": "official",
+          "comingSoon": true,
+          "catalogId": "notion",
+          "docs": "https://developers.notion.com/docs/mcp"
+        }
+      ]
+    },
+    {
+      "id": "playwright",
+      "name": "Playwright (browser)",
+      "description": "Drive a real browser: open pages, click, fill forms, take screenshots. For UI checks and web tasks.",
+      "category": "web",
+      "docs": "https://github.com/microsoft/playwright-mcp",
+      "uses": [
+        "tools"
+      ],
+      "mechanisms": [
+        {
+          "id": "mcp",
+          "kind": "mcp",
+          "label": "MCP server on this machine",
+          "runs": "here",
+          "auth": "none",
+          "trust": "official",
+          "comingSoon": false,
+          "catalogId": "playwright",
+          "docs": "https://github.com/microsoft/playwright-mcp"
+        }
+      ]
+    },
+    {
+      "id": "postgres",
+      "name": "PostgreSQL",
+      "description": "Run read-only SQL against a Postgres database and inspect its schema.",
+      "category": "data",
+      "docs": "https://github.com/modelcontextprotocol/servers-archived/tree/main/src/postgres",
+      "uses": [
+        "tools"
+      ],
+      "mechanisms": [
+        {
+          "id": "mcp",
+          "kind": "mcp",
+          "label": "MCP server on this machine",
+          "runs": "here",
+          "auth": "token",
+          "trust": "community",
+          "comingSoon": false,
+          "catalogId": "postgres",
+          "docs": "https://github.com/modelcontextprotocol/servers-archived/tree/main/src/postgres"
+        }
+      ]
+    },
+    {
+      "id": "sentry",
+      "name": "Sentry",
+      "description": "Errors, issues and performance data from Sentry (hosted server, signs in through the browser).",
+      "category": "ops",
+      "docs": "https://docs.sentry.io/product/sentry-mcp/",
+      "uses": [
+        "tools"
+      ],
+      "mechanisms": [
+        {
+          "id": "mcp",
+          "kind": "mcp",
+          "label": "Hosted MCP server",
+          "runs": "hosted",
+          "auth": "oauth",
+          "trust": "official",
+          "comingSoon": true,
+          "catalogId": "sentry",
+          "docs": "https://docs.sentry.io/product/sentry-mcp/"
+        }
+      ]
+    },
+    {
+      "id": "sequential-thinking",
+      "name": "Sequential thinking",
+      "description": "A structured step-by-step reasoning tool for harder problems.",
+      "category": "code",
+      "docs": "https://github.com/modelcontextprotocol/servers/tree/main/src/sequentialthinking",
+      "uses": [
+        "tools"
+      ],
+      "mechanisms": [
+        {
+          "id": "mcp",
+          "kind": "mcp",
+          "label": "MCP server on this machine",
+          "runs": "here",
+          "auth": "none",
+          "trust": "official",
+          "comingSoon": false,
+          "catalogId": "sequential-thinking",
+          "docs": "https://github.com/modelcontextprotocol/servers/tree/main/src/sequentialthinking"
+        }
+      ]
+    },
+    {
+      "id": "slack",
+      "name": "Slack",
+      "description": "Read channels and post messages in a Slack workspace through a bot token.",
+      "category": "work",
+      "docs": "https://github.com/modelcontextprotocol/servers-archived/tree/main/src/slack",
+      "uses": [
+        "tools"
+      ],
+      "mechanisms": [
+        {
+          "id": "mcp",
+          "kind": "mcp",
+          "label": "MCP server on this machine",
+          "runs": "here",
+          "auth": "token",
+          "trust": "official",
+          "comingSoon": false,
+          "catalogId": "slack",
+          "docs": "https://github.com/modelcontextprotocol/servers-archived/tree/main/src/slack"
+        }
+      ]
+    },
+    {
+      "id": "stripe",
+      "name": "Stripe",
+      "description": "Customers, payments, invoices and subscriptions through Stripe's agent toolkit.",
+      "category": "work",
+      "docs": "https://github.com/stripe/agent-toolkit",
+      "uses": [
+        "tools"
+      ],
+      "mechanisms": [
+        {
+          "id": "mcp",
+          "kind": "mcp",
+          "label": "MCP server on this machine",
+          "runs": "here",
+          "auth": "token",
+          "trust": "official",
+          "comingSoon": false,
+          "catalogId": "stripe",
+          "docs": "https://github.com/stripe/agent-toolkit"
+        }
+      ]
+    },
+    {
+      "id": "supabase",
+      "name": "Supabase",
+      "description": "Manage Supabase projects, run SQL, inspect tables and logs.",
+      "category": "data",
+      "docs": "https://github.com/supabase-community/supabase-mcp",
+      "uses": [
+        "tools"
+      ],
+      "mechanisms": [
+        {
+          "id": "mcp",
+          "kind": "mcp",
+          "label": "MCP server on this machine",
+          "runs": "here",
+          "auth": "token",
+          "trust": "official",
+          "comingSoon": false,
+          "catalogId": "supabase",
+          "docs": "https://github.com/supabase-community/supabase-mcp"
+        }
+      ]
+    },
+    {
+      "id": "telegram",
+      "name": "Telegram",
+      "description": "A bot you own. Your assistant line (approvals, failures, kill switch on your phone) and a gated send_message tool for agents.",
+      "category": "chat",
+      "docs": "https://core.telegram.org/bots",
+      "uses": [
+        "tools",
+        "assistant"
+      ],
+      "mechanisms": [
+        {
+          "id": "native",
+          "kind": "native",
+          "label": "Bot token (BotFather)",
+          "runs": "here",
+          "auth": "token",
+          "trust": "official",
+          "recommended": true,
+          "provider": "telegram",
+          "docs": "https://core.telegram.org/bots#how-do-i-create-a-bot"
+        }
+      ]
+    },
+    {
+      "id": "whatsapp",
+      "name": "WhatsApp",
+      "description": "Business messaging through Meta's official Cloud API, or a personal account through a self-hosted bridge.",
+      "category": "chat",
+      "docs": "https://developers.facebook.com/docs/whatsapp/cloud-api",
+      "uses": [
+        "tools",
+        "assistant"
+      ],
+      "mechanisms": [
+        {
+          "id": "native",
+          "kind": "native",
+          "label": "WhatsApp Business (Cloud API)",
+          "runs": "here",
+          "auth": "token",
+          "trust": "official",
+          "recommended": true,
+          "comingSoon": true,
+          "provider": "whatsapp-business",
+          "warning": "Needs a Meta Business account and a dedicated number. Incoming messages need the gateway's public address (ADR-032 step 10)."
+        },
+        {
+          "id": "mcp:whatsapp-personal",
+          "kind": "mcp",
+          "label": "Personal account (self-hosted bridge)",
+          "runs": "here",
+          "auth": "none",
+          "trust": "unofficial",
+          "catalogId": "whatsapp-personal",
+          "warning": "Links as a WhatsApp Web device over the unofficial protocol. Against WhatsApp's terms; Meta bans accounts it detects automating. Use a secondary number if you can. Runs only on this machine — never through a third party.",
+          "docs": "https://github.com/lharries/whatsapp-mcp"
+        }
+      ]
+    }
+  ],
+  "mcp": [
+    {
+      "id": "filesystem",
+      "name": "Filesystem",
+      "description": "Read, search and edit files under folders you choose. Good first connector; pick a folder you don't mind agents touching.",
+      "category": "files",
+      "transport": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "{{ROOT}}"
+      ],
+      "secrets": [
+        {
+          "key": "ROOT",
+          "label": "Folder to expose",
+          "hint": "C:/Users/you/projects/sandbox",
+          "secret": false
+        }
+      ],
+      "docs": "https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem",
+      "auth": "none",
+      "writes": "creates, edits, moves files inside that folder"
+    },
+    {
+      "id": "github",
+      "name": "GitHub",
+      "description": "Issues, pull requests, code search, repository contents through GitHub's hosted MCP server.",
+      "category": "code",
+      "transport": "http",
+      "url": "https://api.githubcopilot.com/mcp/",
+      "secrets": [
+        {
+          "key": "Authorization",
+          "label": "Personal access token",
+          "hint": "Bearer github_pat_… (fine-grained, repo + issues)",
+          "secret": true
+        }
+      ],
+      "docs": "https://github.com/github/github-mcp-server",
+      "auth": "token",
+      "writes": "opens issues and PRs, comments, pushes files if the token allows"
+    },
+    {
+      "id": "playwright",
+      "name": "Playwright (browser)",
+      "description": "Drive a real browser: open pages, click, fill forms, take screenshots. For UI checks and web tasks.",
+      "category": "web",
+      "transport": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@playwright/mcp@latest"
+      ],
+      "secrets": [],
+      "docs": "https://github.com/microsoft/playwright-mcp",
+      "auth": "none",
+      "writes": "anything a browser can do while signed in on this machine"
+    },
+    {
+      "id": "postgres",
+      "name": "PostgreSQL",
+      "description": "Run read-only SQL against a Postgres database and inspect its schema.",
+      "category": "data",
+      "transport": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-postgres",
+        "{{DATABASE_URL}}"
+      ],
+      "secrets": [
+        {
+          "key": "DATABASE_URL",
+          "label": "Connection string",
+          "hint": "postgresql://user:pass@host:5432/db",
+          "secret": true
+        }
+      ],
+      "docs": "https://github.com/modelcontextprotocol/servers-archived/tree/main/src/postgres",
+      "auth": "token",
+      "writes": "none — the reference server is read-only"
+    },
+    {
+      "id": "slack",
+      "name": "Slack",
+      "description": "Read channels and post messages in a Slack workspace through a bot token.",
+      "category": "work",
+      "transport": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-slack"
+      ],
+      "secrets": [
+        {
+          "key": "SLACK_BOT_TOKEN",
+          "label": "Bot token",
+          "hint": "xoxb-…",
+          "secret": true
+        },
+        {
+          "key": "SLACK_TEAM_ID",
+          "label": "Team id",
+          "hint": "T0123456789",
+          "secret": false
+        }
+      ],
+      "docs": "https://github.com/modelcontextprotocol/servers-archived/tree/main/src/slack",
+      "auth": "token",
+      "writes": "posts messages and reactions as the bot"
+    },
+    {
+      "id": "context7",
+      "name": "Context7 (library docs)",
+      "description": "Up-to-date documentation for libraries and frameworks, so agents stop guessing APIs.",
+      "category": "code",
+      "transport": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@upstash/context7-mcp"
+      ],
+      "secrets": [],
+      "docs": "https://github.com/upstash/context7",
+      "auth": "none",
+      "writes": "none"
+    },
+    {
+      "id": "memory",
+      "name": "Memory (knowledge graph)",
+      "description": "A small local knowledge graph agents can add facts to. Separate from Hivemind's vault; useful for scratch facts.",
+      "category": "memory",
+      "transport": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-memory"
+      ],
+      "secrets": [],
+      "docs": "https://github.com/modelcontextprotocol/servers/tree/main/src/memory",
+      "auth": "none",
+      "writes": "adds and deletes entries in its own graph file"
+    },
+    {
+      "id": "sequential-thinking",
+      "name": "Sequential thinking",
+      "description": "A structured step-by-step reasoning tool for harder problems.",
+      "category": "code",
+      "transport": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-sequential-thinking"
+      ],
+      "secrets": [],
+      "docs": "https://github.com/modelcontextprotocol/servers/tree/main/src/sequentialthinking",
+      "auth": "none",
+      "writes": "none"
+    },
+    {
+      "id": "brave-search",
+      "name": "Brave Search",
+      "description": "Web and local search through the Brave Search API.",
+      "category": "web",
+      "transport": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@brave/brave-search-mcp-server"
+      ],
+      "secrets": [
+        {
+          "key": "BRAVE_API_KEY",
+          "label": "API key",
+          "hint": "from api.search.brave.com",
+          "secret": true
+        }
+      ],
+      "docs": "https://github.com/brave/brave-search-mcp-server",
+      "auth": "token",
+      "writes": "none"
+    },
+    {
+      "id": "stripe",
+      "name": "Stripe",
+      "description": "Customers, payments, invoices and subscriptions through Stripe's agent toolkit.",
+      "category": "work",
+      "transport": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@stripe/mcp",
+        "--tools=all"
+      ],
+      "secrets": [
+        {
+          "key": "STRIPE_SECRET_KEY",
+          "label": "Secret key",
+          "hint": "sk_test_… (use a test key first)",
+          "secret": true
+        }
+      ],
+      "docs": "https://github.com/stripe/agent-toolkit",
+      "auth": "token",
+      "writes": "creates customers, payment links, refunds — keep writes on Ask"
+    },
+    {
+      "id": "supabase",
+      "name": "Supabase",
+      "description": "Manage Supabase projects, run SQL, inspect tables and logs.",
+      "category": "data",
+      "transport": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@supabase/mcp-server-supabase@latest"
+      ],
+      "secrets": [
+        {
+          "key": "SUPABASE_ACCESS_TOKEN",
+          "label": "Personal access token",
+          "hint": "sbp_…",
+          "secret": true
+        }
+      ],
+      "docs": "https://github.com/supabase-community/supabase-mcp",
+      "auth": "token",
+      "writes": "runs SQL, changes schema, manages projects"
+    },
+    {
+      "id": "notion",
+      "name": "Notion",
+      "description": "Pages and databases in your Notion workspace (hosted server, signs in through the browser).",
+      "category": "work",
+      "transport": "http",
+      "url": "https://mcp.notion.com/mcp",
+      "secrets": [],
+      "docs": "https://developers.notion.com/docs/mcp",
+      "auth": "oauth",
+      "writes": "creates and edits pages"
+    },
+    {
+      "id": "linear",
+      "name": "Linear",
+      "description": "Issues, projects and cycles in Linear (hosted server, signs in through the browser).",
+      "category": "work",
+      "transport": "http",
+      "url": "https://mcp.linear.app/mcp",
+      "secrets": [],
+      "docs": "https://linear.app/docs/mcp",
+      "auth": "oauth",
+      "writes": "creates and updates issues"
+    },
+    {
+      "id": "figma",
+      "name": "Figma",
+      "description": "Read design files and components (hosted server, signs in through the browser).",
+      "category": "design",
+      "transport": "http",
+      "url": "https://mcp.figma.com/mcp",
+      "secrets": [],
+      "docs": "https://help.figma.com/hc/en-us/articles/32132100833559",
+      "auth": "oauth",
+      "writes": "none for most tools"
+    },
+    {
+      "id": "atlassian",
+      "name": "Atlassian (Jira, Confluence)",
+      "description": "Jira issues and Confluence pages (hosted server, signs in through the browser).",
+      "category": "work",
+      "transport": "http",
+      "url": "https://mcp.atlassian.com/v1/mcp",
+      "secrets": [],
+      "docs": "https://support.atlassian.com/atlassian-rovo-mcp-server/",
+      "auth": "oauth",
+      "writes": "creates and edits issues and pages"
+    },
+    {
+      "id": "sentry",
+      "name": "Sentry",
+      "description": "Errors, issues and performance data from Sentry (hosted server, signs in through the browser).",
+      "category": "ops",
+      "transport": "http",
+      "url": "https://mcp.sentry.dev/mcp",
+      "secrets": [],
+      "docs": "https://docs.sentry.io/product/sentry-mcp/",
+      "auth": "oauth",
+      "writes": "resolves and assigns issues"
+    },
+    {
+      "id": "whatsapp-personal",
+      "name": "WhatsApp (personal, self-hosted)",
+      "description": "lharries/whatsapp-mcp: a Go bridge linked to your phone as a WhatsApp Web device plus a Python MCP server over its local SQLite store.",
+      "category": "work",
+      "transport": "stdio",
+      "command": "uv",
+      "args": [
+        "--directory",
+        "{{SERVER_DIR}}",
+        "run",
+        "main.py"
+      ],
+      "secrets": [
+        {
+          "key": "SERVER_DIR",
+          "label": "whatsapp-mcp-server folder",
+          "hint": "C:/tools/whatsapp-mcp/whatsapp-mcp-server (clone the repo and run the Go bridge first)",
+          "secret": false
+        }
+      ],
+      "docs": "https://github.com/lharries/whatsapp-mcp",
+      "auth": "none",
+      "writes": "sends messages and media to your contacts and groups as you"
+    }
+  ],
+  "agents": [
+    {
+      "id": "claude-code",
+      "handle": "claude",
+      "displayName": "Claude Code",
+      "detect": {
+        "binaryNames": [
+          "claude",
+          "claude.cmd"
+        ],
+        "knownInstallPaths": {
+          "win32": [
+            "${APPDATA}/npm/claude.cmd"
+          ],
+          "darwin": [],
+          "linux": []
+        },
+        "versionArgs": [
+          "--version"
+        ]
+      },
+      "installHint": "Install with: npm install -g @anthropic-ai/claude-code",
+      "install": {
+        "win32": {
+          "command": "npm",
+          "args": [
+            "install",
+            "-g",
+            "@anthropic-ai/claude-code"
+          ],
+          "display": "npm install -g @anthropic-ai/claude-code"
+        },
+        "darwin": {
+          "command": "npm",
+          "args": [
+            "install",
+            "-g",
+            "@anthropic-ai/claude-code"
+          ],
+          "display": "npm install -g @anthropic-ai/claude-code"
+        },
+        "linux": {
+          "command": "npm",
+          "args": [
+            "install",
+            "-g",
+            "@anthropic-ai/claude-code"
+          ],
+          "display": "npm install -g @anthropic-ai/claude-code"
+        },
+        "postInstall": "Run `claude` once in a terminal and sign in, or paste a Claude Code OAuth token into the agent's settings here.",
+        "homepage": "https://docs.anthropic.com/en/docs/claude-code"
+      },
+      "goodAt": [
+        "refactors",
+        "reviews",
+        "backend",
+        "frontend",
+        "long tasks"
+      ],
+      "verified": true,
+      "blurb": "Anthropic's terminal agent. Strong at multi-file changes, refactors and reviews; the reference agent for Hivemind's hooks.",
+      "kind": "manifest",
+      "invoke": {
+        "command": "claude",
+        "cwd": "project",
+        "files": {
+          "mcp": {
+            "path": "{configDir}/mcp-config.json",
+            "json": {
+              "mcpServers": {
+                "hivemind": {
+                  "command": "{mcp.command}",
+                  "args": "{mcp.args}",
+                  "env": {
+                    "HIVEMIND_TOKEN": "{mcp.env.HIVEMIND_TOKEN}",
+                    "HIVEMIND_CWD": "{mcp.env.HIVEMIND_CWD}",
+                    "HIVEMIND_TOOLS": "{mcp.env.HIVEMIND_TOOLS}",
+                    "HIVEMIND_GATEWAY_URL": "{mcp.env.HIVEMIND_GATEWAY_URL}",
+                    "HIVEMIND_MODE": "{mcp.env.HIVEMIND_MODE}"
+                  }
+                }
+              }
+            }
+          },
+          "settings": {
+            "path": "{configDir}/settings.json",
+            "json": {
+              "hooks": {
+                "SessionStart": [
+                  {
+                    "matcher": "startup|resume|clear|compact|fork",
+                    "hooks": [
+                      {
+                        "type": "command",
+                        "command": "{hook.sessionStart.command}",
+                        "args": "{hook.sessionStart.args}"
+                      }
+                    ]
+                  }
+                ],
+                "PreToolUse": [
+                  {
+                    "matcher": "Edit|Write",
+                    "hooks": [
+                      {
+                        "type": "command",
+                        "command": "{hook.preToolUse.command}",
+                        "args": "{hook.preToolUse.args}"
+                      }
+                    ]
+                  }
+                ],
+                "Stop": [
+                  {
+                    "matcher": "*",
+                    "hooks": [
+                      {
+                        "type": "command",
+                        "command": "{hook.stop.command}",
+                        "args": "{hook.stop.args}"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "before": [],
+        "argv": [
+          "-p",
+          "{prompt}",
+          "--mcp-config",
+          "{file.mcp}",
+          "--settings",
+          "{file.settings}",
+          "--permission-mode",
+          "bypassPermissions",
+          "--output-format",
+          "json",
+          {
+            "when": "project",
+            "args": [
+              "--add-dir",
+              "{projectRoot}"
+            ]
+          }
+        ],
+        "env": {},
+        "prompt": {
+          "bootstrap": "hook",
+          "chat": "Someone mentioned you in the thread \"{thread.title}\" (thread_id {threadId}). Reply there like a teammate, once, with channel.post(thread_id=\"{threadId}\", type=\"note\", body=...), then stop.",
+          "task": "You have been woken for the thread \"{thread.title}\" ({thread.kind}, thread_id {threadId}). Follow the bootstrap instructions in your context, then do the work. Post your results to thread_id {threadId} with the hivemind MCP tools before you finish."
+        },
+        "mcp": {
+          "toolNames": "dot",
+          "chatTools": [
+            "channel.post",
+            "channel.read",
+            "memory.search"
+          ]
+        },
+        "hooks": {
+          "preToolUse": {
+            "writePaths": "claude-code"
+          },
+          "sessionStart": true,
+          "stop": true
+        },
+        "output": {
+          "preset": "claude-json"
+        },
+        "scope": "hook",
+        "needsLogin": [
+          "not logged in",
+          "please run /login",
+          "invalid api key",
+          "authentication_error",
+          "unauthori[sz]ed"
+        ],
+        "timeoutSec": 1800,
+        "chatTimeoutSec": 600
+      }
+    },
+    {
+      "id": "cursor",
+      "handle": "cursor",
+      "displayName": "Cursor",
+      "detect": {
+        "binaryNames": [
+          "cursor-agent",
+          "cursor-agent.cmd",
+          "agent",
+          "agent.cmd"
+        ],
+        "knownInstallPaths": {
+          "win32": [
+            "${LOCALAPPDATA}/cursor-agent/agent.cmd"
+          ],
+          "darwin": [
+            "${HOME}/.local/bin/agent"
+          ],
+          "linux": [
+            "${HOME}/.local/bin/agent"
+          ]
+        },
+        "versionArgs": [
+          "--version"
+        ]
+      },
+      "installHint": "Install the Cursor CLI from cursor.com/docs/cli, then run `agent login` once.",
+      "install": {
+        "win32": {
+          "command": "powershell",
+          "args": [
+            "-NoProfile",
+            "-ExecutionPolicy",
+            "Bypass",
+            "-Command",
+            "irm 'https://cursor.com/install?win32=true' | iex"
+          ],
+          "display": "irm 'https://cursor.com/install?win32=true' | iex"
+        },
+        "darwin": {
+          "command": "bash",
+          "args": [
+            "-lc",
+            "curl https://cursor.com/install -fsS | bash"
+          ],
+          "display": "curl https://cursor.com/install -fsS | bash"
+        },
+        "linux": {
+          "command": "bash",
+          "args": [
+            "-lc",
+            "curl https://cursor.com/install -fsS | bash"
+          ],
+          "display": "curl https://cursor.com/install -fsS | bash"
+        },
+        "postInstall": "Run `agent login` once in a terminal (it opens the browser), then Connect here.",
+        "homepage": "https://cursor.com/docs/cli"
+      },
+      "goodAt": [
+        "frontend",
+        "ui",
+        "quick edits"
+      ],
+      "verified": true,
+      "blurb": "Cursor's headless agent CLI. Fast on front-end and UI work; scope is checked by diff after each run.",
+      "kind": "manifest",
+      "invoke": {
+        "command": "agent",
+        "cwd": "workspace",
+        "files": {
+          "mcp": {
+            "path": "{workspace}/.cursor/mcp.json",
+            "json": {
+              "mcpServers": {
+                "hivemind": {
+                  "command": "{mcp.command}",
+                  "args": "{mcp.args}",
+                  "env": {
+                    "HIVEMIND_TOKEN": "{mcp.env.HIVEMIND_TOKEN}",
+                    "HIVEMIND_CWD": "{mcp.env.HIVEMIND_CWD}",
+                    "HIVEMIND_TOOLS": "{mcp.env.HIVEMIND_TOOLS}",
+                    "HIVEMIND_GATEWAY_URL": "{mcp.env.HIVEMIND_GATEWAY_URL}",
+                    "HIVEMIND_MODE": "{mcp.env.HIVEMIND_MODE}"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "before": [],
+        "argv": [
+          "-p",
+          "--output-format",
+          "stream-json",
+          "--trust",
+          "--approve-mcps",
+          "--force",
+          {
+            "when": "readOnly",
+            "args": [
+              "--mode",
+              "ask"
+            ]
+          },
+          {
+            "when": [
+              "project",
+              "!readOnly"
+            ],
+            "args": [
+              "--add-dir",
+              "{projectRoot}"
+            ]
+          },
+          "{prompt}"
+        ],
+        "env": {
+          "NODE_OPTIONS": "{env.NODE_OPTIONS} --use-system-ca"
+        },
+        "prompt": {
+          "bootstrap": "inline",
+          "chat": "Someone mentioned you in the thread \"{thread.title}\" (thread_id {threadId}). Reply there like a teammate, once, with channel.post(thread_id=\"{threadId}\", type=\"note\", body=...), then stop.",
+          "task": "You have been woken for the thread \"{thread.title}\" ({thread.kind}, thread_id {threadId}). Follow the bootstrap instructions above, then do the work. Post your results to thread_id {threadId} with the hivemind MCP tools before you finish."
+        },
+        "mcp": {
+          "toolNames": "dot",
+          "chatTools": [
+            "channel.post",
+            "channel.read",
+            "memory.search"
+          ]
+        },
+        "hooks": {
+          "sessionStart": false,
+          "stop": false
+        },
+        "output": {
+          "preset": "cursor-stream-json"
+        },
+        "scope": "diff",
+        "needsLogin": [
+          "not logged in",
+          "agent login",
+          "unauthori[sz]ed",
+          "authentication"
+        ],
+        "timeoutSec": 1800,
+        "chatTimeoutSec": 600
+      }
+    },
+    {
+      "id": "codex",
+      "handle": "codex",
+      "displayName": "Codex",
+      "detect": {
+        "binaryNames": [
+          "codex",
+          "codex.cmd"
+        ],
+        "knownInstallPaths": {
+          "win32": [
+            "${LOCALAPPDATA}/Programs/OpenAI/Codex/bin/codex.exe"
+          ],
+          "darwin": [],
+          "linux": []
+        },
+        "versionArgs": [
+          "--version"
+        ]
+      },
+      "installHint": "Install the Codex CLI (`npm install -g @openai/codex` or OpenAI's installer), then run `codex login` once.",
+      "install": {
+        "win32": {
+          "command": "npm",
+          "args": [
+            "install",
+            "-g",
+            "@openai/codex"
+          ],
+          "display": "npm install -g @openai/codex"
+        },
+        "darwin": {
+          "command": "npm",
+          "args": [
+            "install",
+            "-g",
+            "@openai/codex"
+          ],
+          "display": "npm install -g @openai/codex"
+        },
+        "linux": {
+          "command": "npm",
+          "args": [
+            "install",
+            "-g",
+            "@openai/codex"
+          ],
+          "display": "npm install -g @openai/codex"
+        },
+        "postInstall": "Run `codex login` once in a terminal (ChatGPT plan or API key), then Connect here.",
+        "homepage": "https://developers.openai.com/codex/cli"
+      },
+      "goodAt": [
+        "backend",
+        "tests",
+        "focused tasks",
+        "sandboxed"
+      ],
+      "verified": true,
+      "blurb": "OpenAI's terminal agent (ChatGPT plan or API key). Sandboxed by default; good at focused implementation tasks and tests.",
+      "kind": "manifest",
+      "invoke": {
+        "command": "codex",
+        "cwd": "project",
+        "files": {},
+        "before": [],
+        "argv": [
+          "exec",
+          "--ignore-user-config",
+          "--ephemeral",
+          "--skip-git-repo-check",
+          "--json",
+          "--sandbox",
+          {
+            "when": "readOnly",
+            "args": [
+              "read-only"
+            ],
+            "else": [
+              "workspace-write"
+            ]
+          },
+          {
+            "when": "project",
+            "args": [
+              "-C",
+              "{projectRoot}"
+            ]
+          },
+          {
+            "when": "win32",
+            "args": [
+              "-c",
+              "windows.sandbox=\"unelevated\""
+            ]
+          },
+          "--enable",
+          "hooks",
+          "--dangerously-bypass-hook-trust",
+          "-c",
+          "mcp_servers.hivemind.command={mcp.command|json}",
+          "-c",
+          "mcp_servers.hivemind.args={mcp.args|json}",
+          "-c",
+          "mcp_servers.hivemind.env={HIVEMIND_TOKEN={mcp.env.HIVEMIND_TOKEN|json},HIVEMIND_CWD={mcp.env.HIVEMIND_CWD|json},HIVEMIND_TOOLS={mcp.env.HIVEMIND_TOOLS|json},HIVEMIND_GATEWAY_URL={mcp.env.HIVEMIND_GATEWAY_URL|json},HIVEMIND_MODE={mcp.env.HIVEMIND_MODE|json}}",
+          "-c",
+          "mcp_servers.hivemind.startup_timeout_sec=120",
+          "-c",
+          "mcp_servers.hivemind.required=true",
+          "-c",
+          "mcp_servers.hivemind.default_tools_approval_mode=\"approve\"",
+          {
+            "when": "chat",
+            "args": [
+              "-c",
+              "model_reasoning_effort=\"low\""
+            ]
+          },
+          "-c",
+          "hooks.PreToolUse=[{matcher=\"apply_patch|Bash|shell|exec_command|local_shell\",hooks=[{type=\"command\",command={hook.preToolUse.line|json},timeout=600}]}]",
+          "{prompt}"
+        ],
+        "env": {},
+        "prompt": {
+          "bootstrap": "inline",
+          "chat": "Someone mentioned you in the thread \"{thread.title}\" (thread_id {threadId}). Reply there like a teammate, once, with channel.post(thread_id=\"{threadId}\", type=\"note\", body=...), then stop.",
+          "task": "You have been woken for the thread \"{thread.title}\" ({thread.kind}, thread_id {threadId}). Follow the bootstrap instructions above, then do the work. Post your results to thread_id {threadId} with the hivemind MCP tools before you finish."
+        },
+        "mcp": {
+          "toolNames": "dot",
+          "chatTools": [
+            "channel.post",
+            "channel.read",
+            "memory.search"
+          ]
+        },
+        "hooks": {
+          "preToolUse": {
+            "writePaths": "codex-apply-patch"
+          },
+          "sessionStart": false,
+          "stop": false
+        },
+        "output": {
+          "preset": "codex-jsonl"
+        },
+        "scope": "hook",
+        "needsLogin": [
+          "401 Unauthorized",
+          "Missing bearer",
+          "not logged in",
+          "codex login",
+          "please (log|sign) ?in"
+        ],
+        "timeoutSec": 1800,
+        "chatTimeoutSec": 600,
+        "debugLogEnv": "HIVEMIND_CODEX_LOG_DIR"
+      }
+    },
+    {
+      "id": "antigravity",
+      "handle": "antigravity",
+      "displayName": "Antigravity (Google)",
+      "detect": {
+        "binaryNames": [
+          "agy",
+          "agy.exe",
+          "agy.cmd"
+        ],
+        "knownInstallPaths": {
+          "win32": [
+            "${LOCALAPPDATA}/agy/bin/agy.exe",
+            "${LOCALAPPDATA}/Antigravity/agy.exe"
+          ],
+          "darwin": [
+            "${HOME}/.local/bin/agy",
+            "${HOME}/.agy/bin/agy"
+          ],
+          "linux": [
+            "${HOME}/.local/bin/agy",
+            "${HOME}/.agy/bin/agy"
+          ]
+        },
+        "versionArgs": [
+          "--version"
+        ]
+      },
+      "installHint": "Install Google's Antigravity CLI (`agy`) from antigravity.google, then run `agy` once and sign in with Google.",
+      "install": {
+        "win32": {
+          "command": "powershell",
+          "args": [
+            "-NoProfile",
+            "-ExecutionPolicy",
+            "Bypass",
+            "-Command",
+            "irm https://antigravity.google/cli/install.ps1 | iex"
+          ],
+          "display": "irm https://antigravity.google/cli/install.ps1 | iex"
+        },
+        "darwin": {
+          "command": "bash",
+          "args": [
+            "-lc",
+            "curl -fsSL https://antigravity.google/cli/install.sh | bash"
+          ],
+          "display": "curl -fsSL https://antigravity.google/cli/install.sh | bash"
+        },
+        "linux": {
+          "command": "bash",
+          "args": [
+            "-lc",
+            "curl -fsSL https://antigravity.google/cli/install.sh | bash"
+          ],
+          "display": "curl -fsSL https://antigravity.google/cli/install.sh | bash"
+        },
+        "postInstall": "Run `agy` once in a terminal and sign in with your Google account. Until then the agent shows 'needs login' and its wakes fail with that message.",
+        "homepage": "https://antigravity.google"
+      },
+      "goodAt": [
+        "research",
+        "plans",
+        "gemini"
+      ],
+      "verified": true,
+      "blurb": "Google's `agy` agent CLI (Gemini). Good at research-style tasks and plans; tool names use underscores on this client.",
+      "kind": "manifest",
+      "invoke": {
+        "command": "agy",
+        "cwd": "home-workspace",
+        "files": {},
+        "before": [
+          [
+            "agy",
+            "mcp",
+            "add",
+            "--env",
+            "HIVEMIND_TOKEN={mcp.env.HIVEMIND_TOKEN}",
+            "--env",
+            "HIVEMIND_CWD={mcp.env.HIVEMIND_CWD}",
+            "--env",
+            "HIVEMIND_TOOLS={mcp.env.HIVEMIND_TOOLS}",
+            "--env",
+            "HIVEMIND_GATEWAY_URL={mcp.env.HIVEMIND_GATEWAY_URL}",
+            "--env",
+            "HIVEMIND_MODE={mcp.env.HIVEMIND_MODE}",
+            "--env",
+            "HIVEMIND_TOOL_NAMES=underscore",
+            "hivemind",
+            "--",
+            "{mcp.command}",
+            "{mcp.args}"
+          ]
+        ],
+        "argv": [
+          "-p",
+          "{prompt}",
+          "--output-format",
+          "json",
+          "--dangerously-skip-permissions",
+          "--print-timeout",
+          "{innerTimeoutSec}s",
+          {
+            "when": "readOnly",
+            "args": [
+              "--mode",
+              "plan"
+            ]
+          },
+          {
+            "when": [
+              "project",
+              "!readOnly"
+            ],
+            "args": [
+              "--add-dir",
+              "{projectRoot}"
+            ]
+          }
+        ],
+        "env": {},
+        "prompt": {
+          "bootstrap": "inline",
+          "chat": "Someone mentioned you in the thread \"{thread.title}\" (thread_id {threadId}). Reply there like a teammate, once, with channel_post(thread_id=\"{threadId}\", type=\"note\", body=...), then stop. Do not explore files.",
+          "task": "You have been woken for the thread \"{thread.title}\" ({thread.kind}, thread_id {threadId}). Follow the bootstrap instructions above, then do the work. Post your results to thread_id {threadId} with the hivemind MCP tools before you finish.",
+          "note": "Note: on this client the Hivemind MCP tools are named with underscores — channel_post, channel_read, channel_inbox, memory_search, memory_propose, and so on — wherever the instructions above write them with dots."
+        },
+        "mcp": {
+          "toolNames": "underscore",
+          "chatTools": [
+            "channel.post",
+            "channel.read",
+            "memory.search"
+          ]
+        },
+        "hooks": {
+          "sessionStart": false,
+          "stop": false
+        },
+        "output": {
+          "preset": "agy-json"
+        },
+        "scope": "diff",
+        "needsLogin": [
+          "sign in",
+          "login",
+          "unauthenticated",
+          "permission denied",
+          "not logged in"
+        ],
+        "timeoutSec": 1800,
+        "chatTimeoutSec": 600,
+        "debugLogEnv": "HIVEMIND_AGY_LOG_DIR"
+      }
+    },
+    {
+      "id": "aider",
+      "handle": "aider",
+      "displayName": "Aider",
+      "detect": {
+        "binaryNames": [
+          "aider",
+          "aider.exe",
+          "aider.cmd"
+        ],
+        "knownInstallPaths": {
+          "win32": [
+            "${USERPROFILE}/.local/bin/aider.exe"
+          ],
+          "darwin": [
+            "${HOME}/.local/bin/aider"
+          ],
+          "linux": [
+            "${HOME}/.local/bin/aider"
+          ]
+        },
+        "versionArgs": [
+          "--version"
+        ]
+      },
+      "installHint": "Install with the aider.chat installer (uv), then set OPENAI_API_KEY or ANTHROPIC_API_KEY.",
+      "install": {
+        "win32": {
+          "command": "powershell",
+          "args": [
+            "-NoProfile",
+            "-ExecutionPolicy",
+            "Bypass",
+            "-Command",
+            "powershell -ExecutionPolicy ByPass -c \"irm https://aider.chat/install.ps1 | iex\""
+          ],
+          "display": "powershell -ExecutionPolicy ByPass -c \"irm https://aider.chat/install.ps1 | iex\""
+        },
+        "darwin": {
+          "command": "bash",
+          "args": [
+            "-lc",
+            "curl -LsSf https://aider.chat/install.sh | sh"
+          ],
+          "display": "curl -LsSf https://aider.chat/install.sh | sh"
+        },
+        "linux": {
+          "command": "bash",
+          "args": [
+            "-lc",
+            "curl -LsSf https://aider.chat/install.sh | sh"
+          ],
+          "display": "curl -LsSf https://aider.chat/install.sh | sh"
+        },
+        "postInstall": "Set an API key (OPENAI_API_KEY / ANTHROPIC_API_KEY) in the environment Hivemind's daemon runs in, then Connect here.",
+        "homepage": "https://aider.chat"
+      },
+      "goodAt": [
+        "git-native edits",
+        "any model",
+        "budget"
+      ],
+      "verified": false,
+      "blurb": "Open-source, git-native pair programmer for any model via API key. No MCP: it edits files and Hivemind posts its final answer for it.",
+      "kind": "manifest",
+      "invoke": {
+        "command": "aider",
+        "cwd": "project",
+        "files": {},
+        "before": [],
+        "argv": [
+          "--message",
+          "{prompt}",
+          "--yes-always",
+          "--no-pretty",
+          "--no-stream",
+          "--no-fancy-input",
+          "--no-auto-commits",
+          {
+            "when": "readOnly",
+            "args": [
+              "--no-git",
+              "--dry-run"
+            ]
+          }
+        ],
+        "env": {},
+        "prompt": {
+          "bootstrap": "inline",
+          "chat": "Someone mentioned you in the thread \"{thread.title}\". You have no Hivemind tools on this client: write your reply as your final answer, plainly, and Hivemind will post it to the thread for you. Reply like a teammate, once.",
+          "task": "You have been woken for the thread \"{thread.title}\" ({thread.kind}). You have no Hivemind tools on this client: do the work in the files, then end with a short summary of what you changed — Hivemind posts that summary to the thread for you."
+        },
+        "mcp": {
+          "toolNames": "dot",
+          "chatTools": []
+        },
+        "hooks": {
+          "sessionStart": false,
+          "stop": false
+        },
+        "output": {
+          "preset": "plain-text"
+        },
+        "scope": "diff",
+        "needsLogin": [
+          "No LLM model was specified",
+          "no API keys",
+          "API key",
+          "authentication",
+          "unauthori[sz]ed",
+          "401"
+        ],
+        "timeoutSec": 1800,
+        "chatTimeoutSec": 600,
+        "debugLogEnv": "HIVEMIND_AIDER_LOG_DIR"
+      }
+    },
+    {
+      "id": "amp",
+      "handle": "amp",
+      "displayName": "Amp (Sourcegraph)",
+      "detect": {
+        "binaryNames": [
+          "amp",
+          "amp.exe",
+          "amp.cmd"
+        ],
+        "knownInstallPaths": {
+          "win32": [
+            "${APPDATA}/npm/amp.cmd"
+          ],
+          "darwin": [
+            "${HOME}/.local/bin/amp",
+            "${HOME}/.amp/bin/amp"
+          ],
+          "linux": [
+            "${HOME}/.local/bin/amp",
+            "${HOME}/.amp/bin/amp"
+          ]
+        },
+        "versionArgs": [
+          "--version"
+        ]
+      },
+      "installHint": "Install with `curl -fsSL https://ampcode.com/install.sh | bash` (or `npm install -g @ampcode/cli`), then run `amp login` once or set AMP_API_KEY.",
+      "install": {
+        "win32": {
+          "command": "npm",
+          "args": [
+            "install",
+            "-g",
+            "@ampcode/cli"
+          ],
+          "display": "npm install -g @ampcode/cli"
+        },
+        "darwin": {
+          "command": "bash",
+          "args": [
+            "-lc",
+            "curl -fsSL https://ampcode.com/install.sh | bash"
+          ],
+          "display": "curl -fsSL https://ampcode.com/install.sh | bash"
+        },
+        "linux": {
+          "command": "bash",
+          "args": [
+            "-lc",
+            "curl -fsSL https://ampcode.com/install.sh | bash"
+          ],
+          "display": "curl -fsSL https://ampcode.com/install.sh | bash"
+        },
+        "postInstall": "Run `amp login` once in a terminal (or set AMP_API_KEY to an sgamp_ access token), then Connect here.",
+        "homepage": "https://ampcode.com"
+      },
+      "goodAt": [
+        "large codebases",
+        "sub-agents",
+        "frontier models"
+      ],
+      "verified": false,
+      "blurb": "Sourcegraph's frontier-model agent with sub-agents and shared threads. `amp -x` headless with Claude-compatible stream JSON.",
+      "kind": "manifest",
+      "invoke": {
+        "command": "amp",
+        "cwd": "project",
+        "files": {
+          "settings": {
+            "path": "{configDir}/amp-settings.json",
+            "json": {
+              "amp.mcpServers": {
+                "hivemind": {
+                  "command": "{mcp.command}",
+                  "args": "{mcp.args}",
+                  "env": {
+                    "HIVEMIND_TOKEN": "{mcp.env.HIVEMIND_TOKEN}",
+                    "HIVEMIND_CWD": "{mcp.env.HIVEMIND_CWD}",
+                    "HIVEMIND_TOOLS": "{mcp.env.HIVEMIND_TOOLS}",
+                    "HIVEMIND_GATEWAY_URL": "{mcp.env.HIVEMIND_GATEWAY_URL}",
+                    "HIVEMIND_MODE": "{mcp.env.HIVEMIND_MODE}",
+                    "HIVEMIND_TOOL_NAMES": "underscore"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "before": [],
+        "argv": [
+          "-x",
+          "--stream-json",
+          "--settings-file",
+          "{file.settings}",
+          "{prompt}"
+        ],
+        "env": {},
+        "prompt": {
+          "bootstrap": "inline",
+          "chat": "Someone mentioned you in the thread \"{thread.title}\" (thread_id {threadId}). Reply there like a teammate, once, with channel_post(thread_id=\"{threadId}\", type=\"note\", body=...), then stop.",
+          "task": "You have been woken for the thread \"{thread.title}\" ({thread.kind}, thread_id {threadId}). Follow the bootstrap instructions above, then do the work. Post your results to thread_id {threadId} with the hivemind MCP tools before you finish.",
+          "note": "Note: on this client the Hivemind MCP tools are named with underscores (channel_post, channel_read, channel_inbox, memory_search, memory_propose, …), shown as mcp__hivemind__<tool>, wherever the instructions above write them with dots."
+        },
+        "mcp": {
+          "toolNames": "underscore",
+          "chatTools": [
+            "channel.post",
+            "channel.read",
+            "memory.search"
+          ]
+        },
+        "hooks": {
+          "sessionStart": false,
+          "stop": false
+        },
+        "output": {
+          "format": "jsonl",
+          "text": [
+            {
+              "match": {
+                "type": "result"
+              },
+              "path": "result"
+            }
+          ],
+          "tokens": {
+            "match": {
+              "type": "result"
+            },
+            "sum": [
+              "usage.input_tokens",
+              "usage.output_tokens"
+            ]
+          },
+          "error": [
+            {
+              "match": {
+                "type": "result",
+                "is_error": true
+              },
+              "path": "error"
+            }
+          ]
+        },
+        "scope": "diff",
+        "needsLogin": [
+          "amp login",
+          "AMP_API_KEY",
+          "not logged in",
+          "unauthori[sz]ed",
+          "401"
+        ],
+        "timeoutSec": 1800,
+        "chatTimeoutSec": 600,
+        "debugLogEnv": "HIVEMIND_AMP_LOG_DIR"
+      }
+    },
+    {
+      "id": "augment",
+      "handle": "auggie",
+      "displayName": "Augment Code (auggie)",
+      "detect": {
+        "binaryNames": [
+          "auggie",
+          "auggie.cmd"
+        ],
+        "knownInstallPaths": {
+          "win32": [
+            "${APPDATA}/npm/auggie.cmd"
+          ],
+          "darwin": [],
+          "linux": []
+        },
+        "versionArgs": [
+          "--version"
+        ]
+      },
+      "installHint": "Install with `npm install -g @augmentcode/auggie` (Node 22+), then run `auggie login` once.",
+      "install": {
+        "win32": {
+          "command": "npm",
+          "args": [
+            "install",
+            "-g",
+            "@augmentcode/auggie"
+          ],
+          "display": "npm install -g @augmentcode/auggie"
+        },
+        "darwin": {
+          "command": "npm",
+          "args": [
+            "install",
+            "-g",
+            "@augmentcode/auggie"
+          ],
+          "display": "npm install -g @augmentcode/auggie"
+        },
+        "linux": {
+          "command": "npm",
+          "args": [
+            "install",
+            "-g",
+            "@augmentcode/auggie"
+          ],
+          "display": "npm install -g @augmentcode/auggie"
+        },
+        "postInstall": "Run `auggie login` once in a terminal, then Connect here. Print mode may be disabled on some enterprise agreements.",
+        "homepage": "https://www.augmentcode.com"
+      },
+      "goodAt": [
+        "large codebases",
+        "context engine",
+        "enterprise"
+      ],
+      "verified": false,
+      "blurb": "Augment's CLI with its semantic context engine for big codebases. `--print` headless; `--ask` for read-only; hooks.",
+      "kind": "manifest",
+      "invoke": {
+        "command": "auggie",
+        "cwd": "project",
+        "files": {
+          "mcp": {
+            "path": "{configDir}/mcp-config.json",
+            "json": {
+              "mcpServers": {
+                "hivemind": {
+                  "command": "{mcp.command}",
+                  "args": "{mcp.args}",
+                  "env": {
+                    "HIVEMIND_TOKEN": "{mcp.env.HIVEMIND_TOKEN}",
+                    "HIVEMIND_CWD": "{mcp.env.HIVEMIND_CWD}",
+                    "HIVEMIND_TOOLS": "{mcp.env.HIVEMIND_TOOLS}",
+                    "HIVEMIND_GATEWAY_URL": "{mcp.env.HIVEMIND_GATEWAY_URL}",
+                    "HIVEMIND_MODE": "{mcp.env.HIVEMIND_MODE}",
+                    "HIVEMIND_TOOL_NAMES": "underscore"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "before": [],
+        "argv": [
+          "--print",
+          "{prompt}",
+          "--quiet",
+          "--allow-indexing",
+          "--mcp-config",
+          "{file.mcp}",
+          {
+            "when": "readOnly",
+            "args": [
+              "--ask"
+            ]
+          }
+        ],
+        "env": {},
+        "prompt": {
+          "bootstrap": "inline",
+          "chat": "Someone mentioned you in the thread \"{thread.title}\" (thread_id {threadId}). Reply there like a teammate, once, with channel_post(thread_id=\"{threadId}\", type=\"note\", body=...), then stop.",
+          "task": "You have been woken for the thread \"{thread.title}\" ({thread.kind}, thread_id {threadId}). Follow the bootstrap instructions above, then do the work. Post your results to thread_id {threadId} with the hivemind MCP tools before you finish.",
+          "note": "Note: on this client the Hivemind MCP tools are named with underscores (channel_post, channel_read, channel_inbox, memory_search, memory_propose, …), shown as <tool>_hivemind, wherever the instructions above write them with dots."
+        },
+        "mcp": {
+          "toolNames": "underscore",
+          "chatTools": [
+            "channel.post",
+            "channel.read",
+            "memory.search"
+          ]
+        },
+        "hooks": {
+          "sessionStart": false,
+          "stop": false
+        },
+        "output": {
+          "preset": "plain-text"
+        },
+        "scope": "diff",
+        "needsLogin": [
+          "auggie login",
+          "not logged in",
+          "sign in",
+          "unauthori[sz]ed",
+          "session"
+        ],
+        "timeoutSec": 1800,
+        "chatTimeoutSec": 600,
+        "debugLogEnv": "HIVEMIND_AUGGIE_LOG_DIR"
+      }
+    },
+    {
+      "id": "copilot-cli",
+      "handle": "copilot",
+      "displayName": "GitHub Copilot CLI",
+      "detect": {
+        "binaryNames": [
+          "copilot",
+          "copilot.exe",
+          "copilot.cmd"
+        ],
+        "knownInstallPaths": {
+          "win32": [
+            "${APPDATA}/npm/copilot.cmd",
+            "${LOCALAPPDATA}/Microsoft/WinGet/Links/copilot.exe"
+          ],
+          "darwin": [
+            "${HOME}/.local/bin/copilot",
+            "/opt/homebrew/bin/copilot"
+          ],
+          "linux": [
+            "${HOME}/.local/bin/copilot"
+          ]
+        },
+        "versionArgs": [
+          "--version"
+        ]
+      },
+      "installHint": "Install with `winget install GitHub.Copilot`, `brew install copilot-cli` or `npm install -g @github/copilot`, then run `copilot` once in your project and sign in (/login) and trust the folder.",
+      "install": {
+        "win32": {
+          "command": "winget",
+          "args": [
+            "install",
+            "--exact",
+            "--id",
+            "GitHub.Copilot",
+            "--accept-source-agreements",
+            "--accept-package-agreements"
+          ],
+          "display": "winget install --exact --id GitHub.Copilot"
+        },
+        "darwin": {
+          "command": "bash",
+          "args": [
+            "-lc",
+            "curl -fsSL https://gh.io/copilot-install | bash"
+          ],
+          "display": "curl -fsSL https://gh.io/copilot-install | bash"
+        },
+        "linux": {
+          "command": "bash",
+          "args": [
+            "-lc",
+            "curl -fsSL https://gh.io/copilot-install | bash"
+          ],
+          "display": "curl -fsSL https://gh.io/copilot-install | bash"
+        },
+        "postInstall": "Run `copilot` once in a terminal, /login, and trust the project folder when asked (headless runs cannot answer that prompt), then Connect here.",
+        "homepage": "https://github.com/features/copilot/cli"
+      },
+      "goodAt": [
+        "github issues and prs",
+        "multi-model",
+        "plan mode"
+      ],
+      "verified": false,
+      "blurb": "GitHub's terminal agent: GitHub MCP server built in, multi-model, plan mode, hooks. Needs the folder trusted once interactively.",
+      "kind": "manifest",
+      "invoke": {
+        "command": "copilot",
+        "cwd": "project",
+        "files": {
+          "mcp": {
+            "path": "{configDir}/mcp-config.json",
+            "json": {
+              "mcpServers": {
+                "hivemind": {
+                  "type": "local",
+                  "command": "{mcp.command}",
+                  "args": "{mcp.args}",
+                  "env": {
+                    "HIVEMIND_TOKEN": "{mcp.env.HIVEMIND_TOKEN}",
+                    "HIVEMIND_CWD": "{mcp.env.HIVEMIND_CWD}",
+                    "HIVEMIND_TOOLS": "{mcp.env.HIVEMIND_TOOLS}",
+                    "HIVEMIND_GATEWAY_URL": "{mcp.env.HIVEMIND_GATEWAY_URL}",
+                    "HIVEMIND_MODE": "{mcp.env.HIVEMIND_MODE}",
+                    "HIVEMIND_TOOL_NAMES": "underscore"
+                  },
+                  "tools": [
+                    "*"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "before": [],
+        "argv": [
+          "-p",
+          "{prompt}",
+          "-s",
+          "--no-ask-user",
+          "--allow-all-tools",
+          "--additional-mcp-config=@{file.mcp}",
+          {
+            "when": "readOnly",
+            "args": [
+              "--plan"
+            ]
+          },
+          {
+            "when": [
+              "project",
+              "!readOnly"
+            ],
+            "args": [
+              "--add-dir={projectRoot}"
+            ]
+          }
+        ],
+        "env": {},
+        "prompt": {
+          "bootstrap": "inline",
+          "chat": "Someone mentioned you in the thread \"{thread.title}\" (thread_id {threadId}). Reply there like a teammate, once, with channel_post(thread_id=\"{threadId}\", type=\"note\", body=...), then stop.",
+          "task": "You have been woken for the thread \"{thread.title}\" ({thread.kind}, thread_id {threadId}). Follow the bootstrap instructions above, then do the work. Post your results to thread_id {threadId} with the hivemind MCP tools before you finish.",
+          "note": "Note: on this client the Hivemind MCP tools are named with underscores (channel_post, channel_read, channel_inbox, memory_search, memory_propose, …) wherever the instructions above write them with dots."
+        },
+        "mcp": {
+          "toolNames": "underscore",
+          "chatTools": [
+            "channel.post",
+            "channel.read",
+            "memory.search"
+          ]
+        },
+        "hooks": {
+          "sessionStart": false,
+          "stop": false
+        },
+        "output": {
+          "preset": "plain-text"
+        },
+        "scope": "diff",
+        "needsLogin": [
+          "/login",
+          "not logged in",
+          "COPILOT_GITHUB_TOKEN",
+          "unauthori[sz]ed",
+          "401"
+        ],
+        "timeoutSec": 1800,
+        "chatTimeoutSec": 600,
+        "debugLogEnv": "HIVEMIND_COPILOT_LOG_DIR"
+      }
+    },
+    {
+      "id": "crush",
+      "handle": "crush",
+      "displayName": "Crush (Charm)",
+      "detect": {
+        "binaryNames": [
+          "crush",
+          "crush.exe",
+          "crush.cmd"
+        ],
+        "knownInstallPaths": {
+          "win32": [
+            "${LOCALAPPDATA}/Microsoft/WinGet/Links/crush.exe",
+            "${USERPROFILE}/scoop/shims/crush.exe",
+            "${APPDATA}/npm/crush.cmd"
+          ],
+          "darwin": [
+            "/opt/homebrew/bin/crush"
+          ],
+          "linux": [
+            "/usr/local/bin/crush"
+          ]
+        },
+        "versionArgs": [
+          "--version"
+        ]
+      },
+      "installHint": "Install with `winget install charmbracelet.crush`, `brew install charmbracelet/tap/crush` or `npm install -g @charmland/crush`, then run `crush` once to pick a provider.",
+      "install": {
+        "win32": {
+          "command": "winget",
+          "args": [
+            "install",
+            "--exact",
+            "--id",
+            "charmbracelet.crush",
+            "--accept-source-agreements",
+            "--accept-package-agreements"
+          ],
+          "display": "winget install --exact --id charmbracelet.crush"
+        },
+        "darwin": {
+          "command": "bash",
+          "args": [
+            "-lc",
+            "brew install charmbracelet/tap/crush"
+          ],
+          "display": "brew install charmbracelet/tap/crush"
+        },
+        "linux": {
+          "command": "npm",
+          "args": [
+            "install",
+            "-g",
+            "@charmland/crush"
+          ],
+          "display": "npm install -g @charmland/crush"
+        },
+        "postInstall": "Run `crush` once in a terminal and configure a provider (or set ANTHROPIC_API_KEY / OPENAI_API_KEY), then Connect here.",
+        "homepage": "https://charm.land"
+      },
+      "goodAt": [
+        "any provider",
+        "windows native",
+        "quick edits"
+      ],
+      "verified": false,
+      "blurb": "Charm's open-source, provider-agnostic terminal agent with native Windows support. `crush run` headless; Bash-style config; PreToolUse hooks.",
+      "kind": "manifest",
+      "invoke": {
+        "command": "crush",
+        "cwd": "project",
+        "files": {
+          "crushrc": {
+            "path": "{configDir}/crushrc",
+            "text": "mcp add hivemind --command {mcp.command|json} --args {mcp.argsLine} --env HIVEMIND_TOKEN {mcp.env.HIVEMIND_TOKEN|json} --env HIVEMIND_CWD {mcp.env.HIVEMIND_CWD|json} --env HIVEMIND_TOOLS {mcp.env.HIVEMIND_TOOLS|json} --env HIVEMIND_GATEWAY_URL {mcp.env.HIVEMIND_GATEWAY_URL|json} --env HIVEMIND_MODE {mcp.env.HIVEMIND_MODE|json} --env HIVEMIND_TOOL_NAMES underscore --timeout 120\n"
+          }
+        },
+        "before": [],
+        "argv": [
+          "run",
+          "-q",
+          "-y",
+          "{prompt}"
+        ],
+        "env": {
+          "CRUSH_GLOBAL_CONFIG": "{file.crushrc}"
+        },
+        "prompt": {
+          "bootstrap": "inline",
+          "chat": "Someone mentioned you in the thread \"{thread.title}\" (thread_id {threadId}). Reply there like a teammate, once, with channel_post(thread_id=\"{threadId}\", type=\"note\", body=...), then stop.",
+          "task": "You have been woken for the thread \"{thread.title}\" ({thread.kind}, thread_id {threadId}). Follow the bootstrap instructions above, then do the work. Post your results to thread_id {threadId} with the hivemind MCP tools before you finish.",
+          "note": "Note: on this client the Hivemind MCP tools are named with underscores (channel_post, channel_read, channel_inbox, memory_search, memory_propose, …), shown as mcp_hivemind_<tool>, wherever the instructions above write them with dots."
+        },
+        "mcp": {
+          "toolNames": "underscore",
+          "chatTools": [
+            "channel.post",
+            "channel.read",
+            "memory.search"
+          ]
+        },
+        "hooks": {
+          "sessionStart": false,
+          "stop": false
+        },
+        "output": {
+          "preset": "plain-text"
+        },
+        "scope": "diff",
+        "needsLogin": [
+          "no providers configured",
+          "API key",
+          "unauthori[sz]ed",
+          "401"
+        ],
+        "timeoutSec": 1800,
+        "chatTimeoutSec": 600,
+        "debugLogEnv": "HIVEMIND_CRUSH_LOG_DIR"
+      }
+    },
+    {
+      "id": "factory-droid",
+      "handle": "droid",
+      "displayName": "Factory Droid",
+      "detect": {
+        "binaryNames": [
+          "droid",
+          "droid.exe",
+          "droid.cmd"
+        ],
+        "knownInstallPaths": {
+          "win32": [
+            "${USERPROFILE}/bin/droid.exe"
+          ],
+          "darwin": [
+            "${HOME}/.local/bin/droid"
+          ],
+          "linux": [
+            "${HOME}/.local/bin/droid"
+          ]
+        },
+        "versionArgs": [
+          "--version"
+        ]
+      },
+      "installHint": "Install from factory.ai (`curl -fsSL https://app.factory.ai/cli | sh`, or the PowerShell line on Windows), then run `droid` once and sign in, or set FACTORY_API_KEY.",
+      "install": {
+        "win32": {
+          "command": "powershell",
+          "args": [
+            "-NoProfile",
+            "-ExecutionPolicy",
+            "Bypass",
+            "-Command",
+            "irm https://app.factory.ai/cli/windows | iex"
+          ],
+          "display": "irm https://app.factory.ai/cli/windows | iex"
+        },
+        "darwin": {
+          "command": "bash",
+          "args": [
+            "-lc",
+            "curl -fsSL https://app.factory.ai/cli | sh"
+          ],
+          "display": "curl -fsSL https://app.factory.ai/cli | sh"
+        },
+        "linux": {
+          "command": "bash",
+          "args": [
+            "-lc",
+            "curl -fsSL https://app.factory.ai/cli | sh"
+          ],
+          "display": "curl -fsSL https://app.factory.ai/cli | sh"
+        },
+        "postInstall": "Run `droid` once in a terminal and sign in (or set FACTORY_API_KEY), then Connect here.",
+        "homepage": "https://factory.ai"
+      },
+      "goodAt": [
+        "ci automation",
+        "tiered autonomy",
+        "model-agnostic",
+        "long tasks"
+      ],
+      "verified": false,
+      "blurb": "Factory's `droid exec`: tiered autonomy (read-only by default), model-agnostic, built for CI-style one-shot runs.",
+      "kind": "manifest",
+      "invoke": {
+        "command": "droid",
+        "cwd": "project",
+        "files": {},
+        "before": [
+          [
+            "droid",
+            "mcp",
+            "add",
+            "hivemind",
+            "{mcp.commandLine}",
+            "--type",
+            "stdio",
+            "--env",
+            "HIVEMIND_TOKEN={mcp.env.HIVEMIND_TOKEN}",
+            "--env",
+            "HIVEMIND_CWD={mcp.env.HIVEMIND_CWD}",
+            "--env",
+            "HIVEMIND_TOOLS={mcp.env.HIVEMIND_TOOLS}",
+            "--env",
+            "HIVEMIND_GATEWAY_URL={mcp.env.HIVEMIND_GATEWAY_URL}",
+            "--env",
+            "HIVEMIND_MODE={mcp.env.HIVEMIND_MODE}",
+            "--env",
+            "HIVEMIND_TOOL_NAMES=underscore"
+          ]
+        ],
+        "argv": [
+          "exec",
+          "--output-format",
+          "json",
+          {
+            "when": "!readOnly",
+            "args": [
+              "--auto",
+              "medium"
+            ]
+          },
+          "{prompt}"
+        ],
+        "env": {},
+        "prompt": {
+          "bootstrap": "inline",
+          "chat": "Someone mentioned you in the thread \"{thread.title}\" (thread_id {threadId}). Reply there like a teammate, once, with channel_post(thread_id=\"{threadId}\", type=\"note\", body=...), then stop.",
+          "task": "You have been woken for the thread \"{thread.title}\" ({thread.kind}, thread_id {threadId}). Follow the bootstrap instructions above, then do the work. Post your results to thread_id {threadId} with the hivemind MCP tools before you finish.",
+          "note": "Note: on this client the Hivemind MCP tools are named with underscores (channel_post, channel_read, channel_inbox, memory_search, memory_propose, …), shown as mcp__hivemind__<tool>, wherever the instructions above write them with dots."
+        },
+        "mcp": {
+          "toolNames": "underscore",
+          "chatTools": [
+            "channel.post",
+            "channel.read",
+            "memory.search"
+          ]
+        },
+        "hooks": {
+          "sessionStart": false,
+          "stop": false
+        },
+        "output": {
+          "format": "json",
+          "text": [
+            {
+              "path": "result"
+            }
+          ],
+          "error": [
+            {
+              "match": {
+                "is_error": true
+              },
+              "path": "result"
+            }
+          ]
+        },
+        "scope": "diff",
+        "needsLogin": [
+          "FACTORY_API_KEY",
+          "not logged in",
+          "sign in",
+          "please log ?in",
+          "unauthori[sz]ed",
+          "invalid api key"
+        ],
+        "timeoutSec": 1800,
+        "chatTimeoutSec": 600,
+        "debugLogEnv": "HIVEMIND_DROID_LOG_DIR"
+      }
+    },
+    {
+      "id": "goose",
+      "handle": "goose",
+      "displayName": "Goose",
+      "detect": {
+        "binaryNames": [
+          "goose",
+          "goose.exe"
+        ],
+        "knownInstallPaths": {
+          "win32": [
+            "${USERPROFILE}/.local/bin/goose.exe"
+          ],
+          "darwin": [
+            "${HOME}/.local/bin/goose",
+            "/opt/homebrew/bin/goose"
+          ],
+          "linux": [
+            "${HOME}/.local/bin/goose"
+          ]
+        },
+        "versionArgs": [
+          "--version"
+        ]
+      },
+      "installHint": "Install from goose-docs.ai (curl installer, or the PowerShell download_cli.ps1 on Windows), then run `goose configure` to pick a provider.",
+      "install": {
+        "win32": {
+          "command": "powershell",
+          "args": [
+            "-NoProfile",
+            "-ExecutionPolicy",
+            "Bypass",
+            "-Command",
+            "Invoke-WebRequest -Uri 'https://github.com/aaif-goose/goose/releases/download/stable/download_cli.ps1' -OutFile download_cli.ps1; $env:CONFIGURE='false'; .\\download_cli.ps1"
+          ],
+          "display": "Invoke-WebRequest -Uri 'https://github.com/aaif-goose/goose/releases/download/stable/download_cli.ps1' -OutFile download_cli.ps1; $env:CONFIGURE='false'; .\\download_cli.ps1"
+        },
+        "darwin": {
+          "command": "bash",
+          "args": [
+            "-lc",
+            "curl -fsSL https://github.com/aaif-goose/goose/releases/download/stable/download_cli.sh | CONFIGURE=false bash"
+          ],
+          "display": "curl -fsSL https://github.com/aaif-goose/goose/releases/download/stable/download_cli.sh | CONFIGURE=false bash"
+        },
+        "linux": {
+          "command": "bash",
+          "args": [
+            "-lc",
+            "curl -fsSL https://github.com/aaif-goose/goose/releases/download/stable/download_cli.sh | CONFIGURE=false bash"
+          ],
+          "display": "curl -fsSL https://github.com/aaif-goose/goose/releases/download/stable/download_cli.sh | CONFIGURE=false bash"
+        },
+        "postInstall": "Run `goose configure` once in a terminal to choose a provider and key, then Connect here.",
+        "homepage": "https://goose-docs.ai"
+      },
+      "goodAt": [
+        "open source",
+        "any provider",
+        "workflows"
+      ],
+      "verified": false,
+      "blurb": "The open-source agent from Block (now Linux Foundation): Rust CLI, 15+ providers, MCP extensions, `goose run` for headless work.",
+      "kind": "manifest",
+      "invoke": {
+        "command": "goose",
+        "cwd": "project",
+        "files": {},
+        "before": [],
+        "argv": [
+          "run",
+          "--no-session",
+          "-q",
+          "--max-turns",
+          "40",
+          "--with-extension",
+          "hivemind:HIVEMIND_TOKEN={mcp.env.HIVEMIND_TOKEN} HIVEMIND_CWD={mcp.env.HIVEMIND_CWD} HIVEMIND_TOOLS={mcp.env.HIVEMIND_TOOLS} HIVEMIND_GATEWAY_URL={mcp.env.HIVEMIND_GATEWAY_URL} HIVEMIND_MODE={mcp.env.HIVEMIND_MODE} HIVEMIND_TOOL_NAMES=underscore {mcp.commandLine}",
+          "-t",
+          "{prompt}"
+        ],
+        "env": {
+          "GOOSE_MODE": "auto",
+          "GOOSE_DISABLE_SESSION_NAMING": "true"
+        },
+        "prompt": {
+          "bootstrap": "inline",
+          "chat": "Someone mentioned you in the thread \"{thread.title}\" (thread_id {threadId}). Reply there like a teammate, once, with channel_post(thread_id=\"{threadId}\", type=\"note\", body=...), then stop.",
+          "task": "You have been woken for the thread \"{thread.title}\" ({thread.kind}, thread_id {threadId}). Follow the bootstrap instructions above, then do the work. Post your results to thread_id {threadId} with the hivemind MCP tools before you finish.",
+          "note": "Note: on this client the Hivemind MCP tools are named with underscores (channel_post, channel_read, channel_inbox, memory_search, memory_propose, …), shown as hivemind__<tool>, wherever the instructions above write them with dots."
+        },
+        "mcp": {
+          "toolNames": "underscore",
+          "chatTools": [
+            "channel.post",
+            "channel.read",
+            "memory.search"
+          ]
+        },
+        "hooks": {
+          "sessionStart": false,
+          "stop": false
+        },
+        "output": {
+          "preset": "plain-text"
+        },
+        "scope": "diff",
+        "needsLogin": [
+          "No provider configured",
+          "No model configured",
+          "goose configure",
+          "API key",
+          "unauthori[sz]ed",
+          "401"
+        ],
+        "timeoutSec": 1800,
+        "chatTimeoutSec": 600,
+        "debugLogEnv": "HIVEMIND_GOOSE_LOG_DIR"
+      }
+    },
+    {
+      "id": "kiro",
+      "handle": "kiro",
+      "displayName": "Kiro CLI (AWS)",
+      "detect": {
+        "binaryNames": [
+          "kiro-cli",
+          "kiro-cli.exe"
+        ],
+        "knownInstallPaths": {
+          "win32": [
+            "${ProgramFiles}/Kiro-Cli/kiro-cli.exe"
+          ],
+          "darwin": [
+            "${HOME}/.local/bin/kiro-cli"
+          ],
+          "linux": [
+            "${HOME}/.local/bin/kiro-cli"
+          ]
+        },
+        "versionArgs": [
+          "--version"
+        ]
+      },
+      "installHint": "Install from kiro.dev/cli, then run `kiro-cli login` once (Builder ID, Google, GitHub or Identity Center), or set KIRO_API_KEY.",
+      "install": {
+        "win32": {
+          "command": "powershell",
+          "args": [
+            "-NoProfile",
+            "-ExecutionPolicy",
+            "Bypass",
+            "-Command",
+            "irm https://cli.kiro.dev/install.ps1 | iex"
+          ],
+          "display": "irm https://cli.kiro.dev/install.ps1 | iex"
+        },
+        "darwin": {
+          "command": "bash",
+          "args": [
+            "-lc",
+            "curl -fsSL https://cli.kiro.dev/install | bash"
+          ],
+          "display": "curl -fsSL https://cli.kiro.dev/install | bash"
+        },
+        "linux": {
+          "command": "bash",
+          "args": [
+            "-lc",
+            "curl -fsSL https://cli.kiro.dev/install | bash"
+          ],
+          "display": "curl -fsSL https://cli.kiro.dev/install | bash"
+        },
+        "postInstall": "Run `kiro-cli login` once in a terminal, then Connect here.",
+        "homepage": "https://kiro.dev/cli/"
+      },
+      "goodAt": [
+        "aws",
+        "infrastructure",
+        "specs"
+      ],
+      "verified": false,
+      "blurb": "AWS's Kiro CLI (successor to Amazon Q Developer CLI). Headless `chat --no-interactive`; hooks and agent configs; strong on AWS work.",
+      "kind": "manifest",
+      "invoke": {
+        "command": "kiro-cli",
+        "cwd": "project",
+        "files": {},
+        "before": [
+          [
+            "kiro-cli",
+            "mcp",
+            "add",
+            "--name",
+            "hivemind",
+            "--command",
+            "{mcp.commandLine}",
+            "--env",
+            "HIVEMIND_TOKEN={mcp.env.HIVEMIND_TOKEN},HIVEMIND_CWD={mcp.env.HIVEMIND_CWD},HIVEMIND_TOOLS={mcp.env.HIVEMIND_TOOLS},HIVEMIND_GATEWAY_URL={mcp.env.HIVEMIND_GATEWAY_URL},HIVEMIND_MODE={mcp.env.HIVEMIND_MODE},HIVEMIND_TOOL_NAMES=underscore",
+            "--scope",
+            "global",
+            "--force"
+          ]
+        ],
+        "argv": [
+          "chat",
+          "--no-interactive",
+          "--trust-all-tools",
+          "--require-mcp-startup",
+          "{prompt}"
+        ],
+        "env": {},
+        "prompt": {
+          "bootstrap": "inline",
+          "chat": "Someone mentioned you in the thread \"{thread.title}\" (thread_id {threadId}). Reply there like a teammate, once, with channel_post(thread_id=\"{threadId}\", type=\"note\", body=...), then stop.",
+          "task": "You have been woken for the thread \"{thread.title}\" ({thread.kind}, thread_id {threadId}). Follow the bootstrap instructions above, then do the work. Post your results to thread_id {threadId} with the hivemind MCP tools before you finish.",
+          "note": "Note: on this client the Hivemind MCP tools are named with underscores (channel_post, channel_read, channel_inbox, memory_search, memory_propose, …), reachable as @hivemind/<tool>, wherever the instructions above write them with dots."
+        },
+        "mcp": {
+          "toolNames": "underscore",
+          "chatTools": [
+            "channel.post",
+            "channel.read",
+            "memory.search"
+          ]
+        },
+        "hooks": {
+          "sessionStart": false,
+          "stop": false
+        },
+        "output": {
+          "preset": "plain-text"
+        },
+        "scope": "diff",
+        "needsLogin": [
+          "not logged in",
+          "kiro-cli login",
+          "sign in",
+          "KIRO_API_KEY",
+          "unauthori[sz]ed",
+          "expired"
+        ],
+        "timeoutSec": 1800,
+        "chatTimeoutSec": 600,
+        "debugLogEnv": "HIVEMIND_KIRO_LOG_DIR"
+      }
+    },
+    {
+      "id": "opencode",
+      "handle": "opencode",
+      "displayName": "OpenCode",
+      "detect": {
+        "binaryNames": [
+          "opencode",
+          "opencode.exe",
+          "opencode.cmd"
+        ],
+        "knownInstallPaths": {
+          "win32": [
+            "${APPDATA}/npm/opencode.cmd",
+            "${USERPROFILE}/.opencode/bin/opencode.exe"
+          ],
+          "darwin": [
+            "${HOME}/.opencode/bin/opencode",
+            "${HOME}/bin/opencode"
+          ],
+          "linux": [
+            "${HOME}/.opencode/bin/opencode",
+            "${HOME}/bin/opencode"
+          ]
+        },
+        "versionArgs": [
+          "--version"
+        ]
+      },
+      "installHint": "Install with `npm install -g opencode-ai` (or brew/scoop/choco), then run `opencode auth login` once.",
+      "install": {
+        "win32": {
+          "command": "npm",
+          "args": [
+            "install",
+            "-g",
+            "opencode-ai"
+          ],
+          "display": "npm install -g opencode-ai"
+        },
+        "darwin": {
+          "command": "npm",
+          "args": [
+            "install",
+            "-g",
+            "opencode-ai"
+          ],
+          "display": "npm install -g opencode-ai"
+        },
+        "linux": {
+          "command": "npm",
+          "args": [
+            "install",
+            "-g",
+            "opencode-ai"
+          ],
+          "display": "npm install -g opencode-ai"
+        },
+        "postInstall": "Run `opencode auth login` once in a terminal and pick a provider, then Connect here.",
+        "homepage": "https://opencode.ai"
+      },
+      "goodAt": [
+        "open source",
+        "any model",
+        "quick edits"
+      ],
+      "verified": false,
+      "blurb": "The open-source terminal agent (any provider, bring your own key). `opencode run` headless, MCP via config, plan agent for read-only.",
+      "kind": "manifest",
+      "invoke": {
+        "command": "opencode",
+        "cwd": "project",
+        "files": {
+          "config": {
+            "path": "{configDir}/opencode.json",
+            "json": {
+              "$schema": "https://opencode.ai/config.json",
+              "mcp": {
+                "hivemind": {
+                  "type": "local",
+                  "command": [
+                    "{mcp.command}",
+                    "{mcp.args}"
+                  ],
+                  "enabled": true,
+                  "timeout": 120000,
+                  "environment": {
+                    "HIVEMIND_TOKEN": "{mcp.env.HIVEMIND_TOKEN}",
+                    "HIVEMIND_CWD": "{mcp.env.HIVEMIND_CWD}",
+                    "HIVEMIND_TOOLS": "{mcp.env.HIVEMIND_TOOLS}",
+                    "HIVEMIND_GATEWAY_URL": "{mcp.env.HIVEMIND_GATEWAY_URL}",
+                    "HIVEMIND_MODE": "{mcp.env.HIVEMIND_MODE}",
+                    "HIVEMIND_TOOL_NAMES": "underscore"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "before": [],
+        "argv": [
+          "run",
+          "--format",
+          "json",
+          {
+            "when": "readOnly",
+            "args": [
+              "--agent",
+              "plan"
+            ]
+          },
+          "--auto",
+          "{prompt}"
+        ],
+        "env": {
+          "OPENCODE_CONFIG": "{file.config}"
+        },
+        "prompt": {
+          "bootstrap": "inline",
+          "chat": "Someone mentioned you in the thread \"{thread.title}\" (thread_id {threadId}). Reply there like a teammate, once, with channel_post(thread_id=\"{threadId}\", type=\"note\", body=...), then stop.",
+          "task": "You have been woken for the thread \"{thread.title}\" ({thread.kind}, thread_id {threadId}). Follow the bootstrap instructions above, then do the work. Post your results to thread_id {threadId} with the hivemind MCP tools before you finish.",
+          "note": "Note: on this client the Hivemind MCP tools are named with underscores (channel_post, channel_read, channel_inbox, memory_search, memory_propose, …), shown as hivemind_<tool>, wherever the instructions above write them with dots."
+        },
+        "mcp": {
+          "toolNames": "underscore",
+          "chatTools": [
+            "channel.post",
+            "channel.read",
+            "memory.search"
+          ]
+        },
+        "hooks": {
+          "sessionStart": false,
+          "stop": false
+        },
+        "output": {
+          "format": "jsonl",
+          "text": [
+            {
+              "match": {
+                "type": "text"
+              },
+              "path": "part.text"
+            }
+          ],
+          "tokens": {
+            "match": {
+              "type": "step_finish"
+            },
+            "sum": [
+              "part.tokens.input",
+              "part.tokens.output",
+              "part.tokens.reasoning"
+            ]
+          },
+          "error": [
+            {
+              "match": {
+                "type": "error"
+              },
+              "path": "error.message"
+            }
+          ]
+        },
+        "scope": "diff",
+        "needsLogin": [
+          "ProviderInitError",
+          "no provider",
+          "auth login",
+          "api key",
+          "unauthori[sz]ed",
+          "401"
+        ],
+        "timeoutSec": 1800,
+        "chatTimeoutSec": 600,
+        "debugLogEnv": "HIVEMIND_OPENCODE_LOG_DIR"
+      }
+    },
+    {
+      "id": "qwen-code",
+      "handle": "qwen",
+      "displayName": "Qwen Code",
+      "detect": {
+        "binaryNames": [
+          "qwen",
+          "qwen.cmd"
+        ],
+        "knownInstallPaths": {
+          "win32": [
+            "${APPDATA}/npm/qwen.cmd"
+          ],
+          "darwin": [
+            "${HOME}/.npm-global/bin/qwen"
+          ],
+          "linux": [
+            "${HOME}/.npm-global/bin/qwen"
+          ]
+        },
+        "versionArgs": [
+          "--version"
+        ]
+      },
+      "installHint": "Install with `npm install -g @qwen-code/qwen-code@latest` (Node 22+), then set OPENAI_API_KEY / OPENAI_BASE_URL or run `qwen` and use /auth.",
+      "install": {
+        "win32": {
+          "command": "npm",
+          "args": [
+            "install",
+            "-g",
+            "@qwen-code/qwen-code@latest"
+          ],
+          "display": "npm install -g @qwen-code/qwen-code@latest"
+        },
+        "darwin": {
+          "command": "npm",
+          "args": [
+            "install",
+            "-g",
+            "@qwen-code/qwen-code@latest"
+          ],
+          "display": "npm install -g @qwen-code/qwen-code@latest"
+        },
+        "linux": {
+          "command": "npm",
+          "args": [
+            "install",
+            "-g",
+            "@qwen-code/qwen-code@latest"
+          ],
+          "display": "npm install -g @qwen-code/qwen-code@latest"
+        },
+        "postInstall": "Run `qwen` once and configure a provider with /auth (or set OPENAI_API_KEY and OPENAI_BASE_URL), then Connect here.",
+        "homepage": "https://github.com/QwenLM/qwen-code"
+      },
+      "goodAt": [
+        "qwen models",
+        "open source",
+        "budget"
+      ],
+      "verified": false,
+      "blurb": "Alibaba's open-source terminal agent (Qwen or any OpenAI-compatible model). `-p` headless with stream-json; approval modes; hooks.",
+      "kind": "manifest",
+      "invoke": {
+        "command": "qwen",
+        "cwd": "project",
+        "files": {
+          "mcp": {
+            "path": "{configDir}/mcp-config.json",
+            "json": {
+              "mcpServers": {
+                "hivemind": {
+                  "command": "{mcp.command}",
+                  "args": "{mcp.args}",
+                  "env": {
+                    "HIVEMIND_TOKEN": "{mcp.env.HIVEMIND_TOKEN}",
+                    "HIVEMIND_CWD": "{mcp.env.HIVEMIND_CWD}",
+                    "HIVEMIND_TOOLS": "{mcp.env.HIVEMIND_TOOLS}",
+                    "HIVEMIND_GATEWAY_URL": "{mcp.env.HIVEMIND_GATEWAY_URL}",
+                    "HIVEMIND_MODE": "{mcp.env.HIVEMIND_MODE}",
+                    "HIVEMIND_TOOL_NAMES": "underscore"
+                  },
+                  "trust": true,
+                  "timeout": 120000
+                }
+              }
+            }
+          }
+        },
+        "before": [],
+        "argv": [
+          "-p",
+          "{prompt}",
+          "--output-format",
+          "stream-json",
+          "--mcp-config",
+          "{file.mcp}",
+          "--approval-mode",
+          {
+            "when": "readOnly",
+            "args": [
+              "plan"
+            ],
+            "else": [
+              "yolo"
+            ]
+          }
+        ],
+        "env": {},
+        "prompt": {
+          "bootstrap": "inline",
+          "chat": "Someone mentioned you in the thread \"{thread.title}\" (thread_id {threadId}). Reply there like a teammate, once, with channel_post(thread_id=\"{threadId}\", type=\"note\", body=...), then stop.",
+          "task": "You have been woken for the thread \"{thread.title}\" ({thread.kind}, thread_id {threadId}). Follow the bootstrap instructions above, then do the work. Post your results to thread_id {threadId} with the hivemind MCP tools before you finish.",
+          "note": "Note: on this client the Hivemind MCP tools are named with underscores (channel_post, channel_read, channel_inbox, memory_search, memory_propose, …), shown as mcp__hivemind__<tool>, wherever the instructions above write them with dots."
+        },
+        "mcp": {
+          "toolNames": "underscore",
+          "chatTools": [
+            "channel.post",
+            "channel.read",
+            "memory.search"
+          ]
+        },
+        "hooks": {
+          "sessionStart": false,
+          "stop": false
+        },
+        "output": {
+          "format": "jsonl",
+          "text": [
+            {
+              "match": {
+                "type": "result"
+              },
+              "path": "result"
+            }
+          ],
+          "tokens": {
+            "match": {
+              "type": "result"
+            },
+            "sum": [
+              "usage.input_tokens",
+              "usage.output_tokens"
+            ]
+          },
+          "error": [
+            {
+              "match": {
+                "type": "result",
+                "is_error": true
+              },
+              "path": "result"
+            }
+          ]
+        },
+        "scope": "diff",
+        "needsLogin": [
+          "api key",
+          "OPENAI_API_KEY",
+          "authentication",
+          "unauthori[sz]ed",
+          "401",
+          "/auth"
+        ],
+        "timeoutSec": 1800,
+        "chatTimeoutSec": 600,
+        "debugLogEnv": "HIVEMIND_QWEN_LOG_DIR"
+      }
+    },
+    {
+      "kind": "service",
+      "id": "lovable",
+      "handle": "lovable",
+      "displayName": "Lovable",
+      "homepage": "https://lovable.dev",
+      "note": "Lovable is a hosted app builder with no local CLI and no public agent API; only third-party wrappers exist. Nothing to install or connect in V1 (§9: API-based services only when the service exposes an API or MCP)."
+    }
+  ]
+}
