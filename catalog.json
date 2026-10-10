@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at": "2026-10-10T09:42:48.510Z",
+  "generated_at": "2026-10-10T11:45:16.194Z",
   "applications": [
     {
       "id": "atlassian",
@@ -155,7 +155,7 @@
     {
       "id": "gmail",
       "name": "Gmail",
-      "description": "Search, read and send mail from one or more Google accounts; an assistant line by mail later.",
+      "description": "Search, read, label and send mail from one or more Google accounts through your own OAuth client. Sending asks first.",
       "category": "mail",
       "docs": "https://developers.google.com/gmail/api",
       "uses": [
@@ -171,9 +171,9 @@
           "auth": "oauth",
           "trust": "official",
           "recommended": true,
-          "comingSoon": true,
           "provider": "gmail",
-          "warning": "Needs an OAuth client from your own Google Cloud project; Hivemind cannot ship one."
+          "warning": "Needs an OAuth client from your own Google Cloud project (one-time); Hivemind cannot ship one. Google shows an 'unverified app' screen you click through.",
+          "docs": "https://console.cloud.google.com/auth/clients"
         }
       ]
     },
