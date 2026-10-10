@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at": "2026-10-10T11:45:16.194Z",
+  "generated_at": "2026-10-10T21:37:07.143Z",
   "applications": [
     {
       "id": "atlassian",
@@ -864,7 +864,8 @@
                     "HIVEMIND_CWD": "{mcp.env.HIVEMIND_CWD}",
                     "HIVEMIND_TOOLS": "{mcp.env.HIVEMIND_TOOLS}",
                     "HIVEMIND_GATEWAY_URL": "{mcp.env.HIVEMIND_GATEWAY_URL}",
-                    "HIVEMIND_MODE": "{mcp.env.HIVEMIND_MODE}"
+                    "HIVEMIND_MODE": "{mcp.env.HIVEMIND_MODE}",
+                    "HIVEMIND_THREAD_ID": "{mcp.env.HIVEMIND_THREAD_ID}"
                   }
                 }
               }
@@ -1052,7 +1053,8 @@
                     "HIVEMIND_CWD": "{mcp.env.HIVEMIND_CWD}",
                     "HIVEMIND_TOOLS": "{mcp.env.HIVEMIND_TOOLS}",
                     "HIVEMIND_GATEWAY_URL": "{mcp.env.HIVEMIND_GATEWAY_URL}",
-                    "HIVEMIND_MODE": "{mcp.env.HIVEMIND_MODE}"
+                    "HIVEMIND_MODE": "{mcp.env.HIVEMIND_MODE}",
+                    "HIVEMIND_THREAD_ID": "{mcp.env.HIVEMIND_THREAD_ID}"
                   }
                 }
               }
@@ -1224,7 +1226,7 @@
           "-c",
           "mcp_servers.hivemind.args={mcp.args|json}",
           "-c",
-          "mcp_servers.hivemind.env={HIVEMIND_TOKEN={mcp.env.HIVEMIND_TOKEN|json},HIVEMIND_CWD={mcp.env.HIVEMIND_CWD|json},HIVEMIND_TOOLS={mcp.env.HIVEMIND_TOOLS|json},HIVEMIND_GATEWAY_URL={mcp.env.HIVEMIND_GATEWAY_URL|json},HIVEMIND_MODE={mcp.env.HIVEMIND_MODE|json}}",
+          "mcp_servers.hivemind.env={HIVEMIND_TOKEN={mcp.env.HIVEMIND_TOKEN|json},HIVEMIND_CWD={mcp.env.HIVEMIND_CWD|json},HIVEMIND_TOOLS={mcp.env.HIVEMIND_TOOLS|json},HIVEMIND_GATEWAY_URL={mcp.env.HIVEMIND_GATEWAY_URL|json},HIVEMIND_MODE={mcp.env.HIVEMIND_MODE|json},HIVEMIND_THREAD_ID={mcp.env.HIVEMIND_THREAD_ID|json}}",
           "-c",
           "mcp_servers.hivemind.startup_timeout_sec=120",
           "-c",
@@ -1366,6 +1368,7 @@
             "HIVEMIND_GATEWAY_URL={mcp.env.HIVEMIND_GATEWAY_URL}",
             "--env",
             "HIVEMIND_MODE={mcp.env.HIVEMIND_MODE}",
+            "HIVEMIND_THREAD_ID={mcp.env.HIVEMIND_THREAD_ID}",
             "--env",
             "HIVEMIND_TOOL_NAMES=underscore",
             "hivemind",
@@ -1634,6 +1637,7 @@
                     "HIVEMIND_TOOLS": "{mcp.env.HIVEMIND_TOOLS}",
                     "HIVEMIND_GATEWAY_URL": "{mcp.env.HIVEMIND_GATEWAY_URL}",
                     "HIVEMIND_MODE": "{mcp.env.HIVEMIND_MODE}",
+                    "HIVEMIND_THREAD_ID": "{mcp.env.HIVEMIND_THREAD_ID}",
                     "HIVEMIND_TOOL_NAMES": "underscore"
                   }
                 }
@@ -1787,6 +1791,7 @@
                     "HIVEMIND_TOOLS": "{mcp.env.HIVEMIND_TOOLS}",
                     "HIVEMIND_GATEWAY_URL": "{mcp.env.HIVEMIND_GATEWAY_URL}",
                     "HIVEMIND_MODE": "{mcp.env.HIVEMIND_MODE}",
+                    "HIVEMIND_THREAD_ID": "{mcp.env.HIVEMIND_THREAD_ID}",
                     "HIVEMIND_TOOL_NAMES": "underscore"
                   }
                 }
@@ -1930,6 +1935,7 @@
                     "HIVEMIND_TOOLS": "{mcp.env.HIVEMIND_TOOLS}",
                     "HIVEMIND_GATEWAY_URL": "{mcp.env.HIVEMIND_GATEWAY_URL}",
                     "HIVEMIND_MODE": "{mcp.env.HIVEMIND_MODE}",
+                    "HIVEMIND_THREAD_ID": "{mcp.env.HIVEMIND_THREAD_ID}",
                     "HIVEMIND_TOOL_NAMES": "underscore"
                   },
                   "tools": [
@@ -2074,7 +2080,7 @@
         "files": {
           "crushrc": {
             "path": "{configDir}/crushrc",
-            "text": "mcp add hivemind --command {mcp.command|json} --args {mcp.argsLine} --env HIVEMIND_TOKEN {mcp.env.HIVEMIND_TOKEN|json} --env HIVEMIND_CWD {mcp.env.HIVEMIND_CWD|json} --env HIVEMIND_TOOLS {mcp.env.HIVEMIND_TOOLS|json} --env HIVEMIND_GATEWAY_URL {mcp.env.HIVEMIND_GATEWAY_URL|json} --env HIVEMIND_MODE {mcp.env.HIVEMIND_MODE|json} --env HIVEMIND_TOOL_NAMES underscore --timeout 120\n"
+            "text": "mcp add hivemind --command {mcp.command|json} --args {mcp.argsLine} --env HIVEMIND_TOKEN {mcp.env.HIVEMIND_TOKEN|json} --env HIVEMIND_CWD {mcp.env.HIVEMIND_CWD|json} --env HIVEMIND_TOOLS {mcp.env.HIVEMIND_TOOLS|json} --env HIVEMIND_GATEWAY_URL {mcp.env.HIVEMIND_GATEWAY_URL|json} --env HIVEMIND_MODE {mcp.env.HIVEMIND_MODE|json} --env HIVEMIND_THREAD_ID {mcp.env.HIVEMIND_THREAD_ID|json} --env HIVEMIND_TOOL_NAMES underscore --timeout 120\n"
           }
         },
         "before": [],
@@ -2209,6 +2215,7 @@
             "HIVEMIND_GATEWAY_URL={mcp.env.HIVEMIND_GATEWAY_URL}",
             "--env",
             "HIVEMIND_MODE={mcp.env.HIVEMIND_MODE}",
+            "HIVEMIND_THREAD_ID={mcp.env.HIVEMIND_THREAD_ID}",
             "--env",
             "HIVEMIND_TOOL_NAMES=underscore"
           ]
@@ -2352,7 +2359,7 @@
           "--max-turns",
           "40",
           "--with-extension",
-          "hivemind:HIVEMIND_TOKEN={mcp.env.HIVEMIND_TOKEN} HIVEMIND_CWD={mcp.env.HIVEMIND_CWD} HIVEMIND_TOOLS={mcp.env.HIVEMIND_TOOLS} HIVEMIND_GATEWAY_URL={mcp.env.HIVEMIND_GATEWAY_URL} HIVEMIND_MODE={mcp.env.HIVEMIND_MODE} HIVEMIND_TOOL_NAMES=underscore {mcp.commandLine}",
+          "hivemind:HIVEMIND_TOKEN={mcp.env.HIVEMIND_TOKEN} HIVEMIND_CWD={mcp.env.HIVEMIND_CWD} HIVEMIND_TOOLS={mcp.env.HIVEMIND_TOOLS} HIVEMIND_GATEWAY_URL={mcp.env.HIVEMIND_GATEWAY_URL} HIVEMIND_MODE={mcp.env.HIVEMIND_MODE} HIVEMIND_THREAD_ID={mcp.env.HIVEMIND_THREAD_ID} HIVEMIND_TOOL_NAMES=underscore {mcp.commandLine}",
           "-t",
           "{prompt}"
         ],
@@ -2473,7 +2480,7 @@
             "--command",
             "{mcp.commandLine}",
             "--env",
-            "HIVEMIND_TOKEN={mcp.env.HIVEMIND_TOKEN},HIVEMIND_CWD={mcp.env.HIVEMIND_CWD},HIVEMIND_TOOLS={mcp.env.HIVEMIND_TOOLS},HIVEMIND_GATEWAY_URL={mcp.env.HIVEMIND_GATEWAY_URL},HIVEMIND_MODE={mcp.env.HIVEMIND_MODE},HIVEMIND_TOOL_NAMES=underscore",
+            "HIVEMIND_TOKEN={mcp.env.HIVEMIND_TOKEN},HIVEMIND_CWD={mcp.env.HIVEMIND_CWD},HIVEMIND_TOOLS={mcp.env.HIVEMIND_TOOLS},HIVEMIND_GATEWAY_URL={mcp.env.HIVEMIND_GATEWAY_URL},HIVEMIND_MODE={mcp.env.HIVEMIND_MODE},HIVEMIND_THREAD_ID={mcp.env.HIVEMIND_THREAD_ID},HIVEMIND_TOOL_NAMES=underscore",
             "--scope",
             "global",
             "--force"
@@ -2613,6 +2620,7 @@
                     "HIVEMIND_TOOLS": "{mcp.env.HIVEMIND_TOOLS}",
                     "HIVEMIND_GATEWAY_URL": "{mcp.env.HIVEMIND_GATEWAY_URL}",
                     "HIVEMIND_MODE": "{mcp.env.HIVEMIND_MODE}",
+                    "HIVEMIND_THREAD_ID": "{mcp.env.HIVEMIND_THREAD_ID}",
                     "HIVEMIND_TOOL_NAMES": "underscore"
                   }
                 }
@@ -2780,6 +2788,7 @@
                     "HIVEMIND_TOOLS": "{mcp.env.HIVEMIND_TOOLS}",
                     "HIVEMIND_GATEWAY_URL": "{mcp.env.HIVEMIND_GATEWAY_URL}",
                     "HIVEMIND_MODE": "{mcp.env.HIVEMIND_MODE}",
+                    "HIVEMIND_THREAD_ID": "{mcp.env.HIVEMIND_THREAD_ID}",
                     "HIVEMIND_TOOL_NAMES": "underscore"
                   },
                   "trust": true,
