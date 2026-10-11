@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at": "2026-10-10T21:37:07.143Z",
+  "generated_at": "2026-10-11T07:34:31.272Z",
   "applications": [
     {
       "id": "atlassian",
@@ -926,7 +926,8 @@
           "--permission-mode",
           "bypassPermissions",
           "--output-format",
-          "json",
+          "stream-json",
+          "--verbose",
           {
             "when": "project",
             "args": [
@@ -957,7 +958,7 @@
           "stop": true
         },
         "output": {
-          "preset": "claude-json"
+          "preset": "claude-stream-json"
         },
         "scope": "hook",
         "needsLogin": [
