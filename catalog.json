@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at": "2026-10-14T05:17:02.102Z",
+  "generated_at": "2026-10-14T07:11:19.803Z",
   "applications": [
     {
       "id": "atlassian",
@@ -455,6 +455,28 @@
       ]
     },
     {
+      "id": "machine",
+      "name": "This machine",
+      "description": "The computer Hivemind runs on, as a connection (ADR-058): lock, sleep, open an allowed app or a web address, list and create folders under roots you choose, desktop notifications. No deleting, moving or reading files. Scope under Settings → Tools.",
+      "category": "ops",
+      "docs": "https://github.com/gethivemind/hivemind",
+      "uses": [
+        "tools"
+      ],
+      "mechanisms": [
+        {
+          "id": "native",
+          "kind": "native",
+          "label": "In-process (no key)",
+          "runs": "here",
+          "auth": "none",
+          "trust": "official",
+          "recommended": true,
+          "provider": "machine"
+        }
+      ]
+    },
+    {
       "id": "whatsapp",
       "name": "WhatsApp",
       "description": "Business messaging through Meta's official Cloud API, or a personal account through a self-hosted bridge.",
@@ -504,7 +526,7 @@
       ],
       "secrets": [],
       "managedTool": "imagestudio",
-      "version": "0.3.0",
+      "version": "0.3.1",
       "docs": "https://github.com/gethivemind/hivemind-imagestudio",
       "auth": "none",
       "writes": "writes finished images into its own output folder; downloads models only with your consent"
