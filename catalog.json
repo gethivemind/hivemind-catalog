@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at": "2026-10-15T20:46:52.547Z",
+  "generated_at": "2026-10-16T00:24:46.191Z",
   "applications": [
     {
       "id": "atlassian",
@@ -526,7 +526,7 @@
       ],
       "secrets": [],
       "managedTool": "imagestudio",
-      "version": "0.3.6",
+      "version": "0.3.7",
       "docs": "https://github.com/gethivemind/hivemind-imagestudio",
       "auth": "none",
       "writes": "writes finished images into its own output folder; downloads models only with your consent"
